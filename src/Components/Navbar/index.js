@@ -2,50 +2,51 @@
 import './navbar.scss';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 import { IconContact, IconHome, IconProject, IconService, Logo } from '../SvgComponent';
 
 
-export const Navbar = () => {
+const layout = [
+  {
+    slug: 'home',
+    icon: <IconHome />
+  }, {
+    slug: 'service',
+    icon: <IconService />
+  }, {
+    slug: 'project',
+    icon: <IconProject />
+  }, {
+    slug: 'contact',
+    icon: <IconContact />
+  }
+]
 
+export const Navbar = () => {
 
   return (
     <nav className='navbar'>
-      <Link href='/'>
+      <Link href='/' onClick={() => { scrollTo(0, 0) }}>
         <Logo />
       </Link>
       <div className='icon-section'>
-        <div className='container-icon'>
-          <Link href='#accueil'>
-            <IconHome />
-          </Link>
-          <p>accueil</p>
-        </div>
-        <div className='container-icon'>
-          <Link href='#services'>
-            <IconService />
-          </Link>
-          <p>services</p>
-        </div>
-        <div className='container-icon'>
-          <Link href='#project'>
-            <IconProject />
-          </Link>
-          <p>projets</p>
-        </div>
-        <div className='container-icon'>
-          <Link href='#contact'>
-            <IconContact />
-          </Link>
-          <p>contact</p>
-        </div>
+        {
+          layout.map((nav,) => {
+            return (
+              <div className='container-icon' key={nav.slug}>
+                <Link href={`#${nav.slug}`}>
+                  {nav.icon}
+                </Link>
+                <p>{nav.slug}</p>
+              </div>
+            )
+          })
+        }
       </div>
-      {/* <Image src={me} alt='Gaetan Santucci' className='navbar-portrait' /> */}
       <Link href='https://www.linkedin.com/in/gaetan-santucci/'>
         <div className='icon-portrait' />
       </Link>
-    </nav>
+    </nav >
   )
 }
 

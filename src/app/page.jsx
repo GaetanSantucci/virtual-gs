@@ -1,44 +1,51 @@
 "use client";
-import { useState } from 'react';
-import styles from '/public/styles/page.module.scss'
-import { ContactPage, Homepage, ProjectPage, ServicePage } from '@/Components';
 
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { useEffect, useRef } from 'react';
+import { ContactPage, Homepage, Navbar, ProjectPage, ServicePage } from '@/Components';
 
-gsap.registerPlugin(ScrollTrigger);
+import { useEffect, useState } from 'react';
+
 
 export default function Home() {
-  const component = useRef();
-  const slider = useRef();
+  const [activeSection, setActiveSection] = useState(0);
+
+  const handleScroll = () => {
+    const currentScrollPosition = window.pageYOffset;
+    const sections = document.querySelectorAll(".section");
+
+    sections.forEach((section, index) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+
+      if (
+        currentScrollPosition >= sectionTop - sectionHeight / 2 &&
+        currentScrollPosition < sectionTop + sectionHeight / 2
+      ) {
+        setActiveSection(index);
+      }
+    });
+  };
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
-      let panels = gsap.utils.toArray(".panel");
-      gsap.to(panels, {
-        xPercent: -100 * (panels.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: slider.current,
-          pin: true,
-          scrub: 1,
-          snap: 1 / (panels.length - 1),
-          end: () => "+=" + slider.current.offsetWidth
-        }
-      });
-    }, component);
-    return () => ctx.revert();
-  });
-
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className="main" ref={component}>
-      <Homepage id='accueil'/>
-      <div ref={slider} className="container">
-      <ServicePage id='service'/>
-      <ProjectPage id='project'/>
+    <div className="slider">
+      <div className={`section ${activeSection === 0 ? "active" : ""}`}>
+        <Homepage />
       </div>
-      <ContactPage id='contact' />
+      <div className={`section ${activeSection === 1 ? "active" : ""}`}>
+        <ServicePage />
       </div>
+      <div className={`section ${activeSection === 2 ? "active" : ""}`}>
+        <ProjectPage />
+      </div>
+      <div className={`section ${activeSection === 2 ? "active" : ""}`}>
+        <ContactPage />
+      </div>
+      <Navbar />
+    </div>
   )
 }

@@ -3,7 +3,7 @@ import { HalfHexagone, SvgBackground } from '../SvgComponent';
 
 export const Homepage = () => {
   return (
-    <section id='home' className='homepage-container'>
+    <section className='homepage-container'>
       <SvgBackground />
       <HalfHexagone />
     </section>

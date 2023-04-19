@@ -1,14 +1,15 @@
 .navbar {
-  position: fixed;
-  overflow: hidden;
-  z-index: 9999;
-  top: 0;
-  right: 0;
   display: flex;
+  overflow: hidden;
+  width: 50px;
   height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
   background-color: #ffffff;
   filter: drop-shadow(-2px 0 5px #ececec);
 }
@@ -17,6 +18,7 @@
   flex-direction: column;
   align-items: center;
   margin: 0;
+  user-select: none;
 
   & a {
     width: 100%;
@@ -70,7 +72,7 @@
   &-logo {
     margin: 0.4rem;
     margin-top: 1.4rem;
-    width: 35px;
+    width: 28px;
     fill: #b3b3b3;
     & path:nth-child(1) {
       fill: #6551ff;
@@ -92,7 +94,6 @@
     margin: 0.5rem;
     margin-bottom: 1.4rem;
     filter: drop-shadow(0 2px 2px #838383);
-
     background: url('/images/portrait.jpg') no-repeat top/100%;
   }
 }
