@@ -1,0 +1,14 @@
+.project-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(160, 255, 137);
+
+  & h2 {
+    color: white;
+    font-size: 4rem;
+    font-family: var(--font-paragraph);
+  }
+}

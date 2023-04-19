@@ -99,14 +99,16 @@
   padding: 0;
   margin: 0;
 }
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+html {
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
+  overflow-y: visible;
+  position: relative;
+  height: unset;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -114,6 +116,11 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 a {
@@ -124,6 +131,19 @@ a {
 p {
   font-family: var(--font-subtitle);
   color: var(--paragraph-color);
+}
+
+.panel {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 200%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  background: #f7f7f7;
 }
 
 .background_neon {

@@ -1,15 +1,15 @@
-// 'use client';
+'use client';
 import './navbar.scss';
 
 import Link from 'next/link';
 import Image from 'next/image';
 
-import me from '/public/images/portrait.jpg';
-
 import { IconContact, IconHome, IconProject, IconService, Logo } from '../SvgComponent';
 
 
 export const Navbar = () => {
+
+
   return (
     <nav className='navbar'>
       <Link href='/'>
@@ -17,7 +17,7 @@ export const Navbar = () => {
       </Link>
       <div className='icon-section'>
         <div className='container-icon'>
-          <Link href='#home'>
+          <Link href='#accueil'>
             <IconHome />
           </Link>
           <p>accueil</p>
@@ -29,7 +29,7 @@ export const Navbar = () => {
           <p>services</p>
         </div>
         <div className='container-icon'>
-          <Link href='#projects'>
+          <Link href='#project'>
             <IconProject />
           </Link>
           <p>projets</p>
