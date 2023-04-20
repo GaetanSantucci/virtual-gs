@@ -14,6 +14,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
+  --icon-colored-fill: #6551ff;
+  --icon-light-fill: #b4b4b4;
+
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
     #16abff33 0deg,
@@ -132,33 +135,21 @@ p {
   font-family: var(--font-subtitle);
   color: var(--paragraph-color);
 }
-
-.container {
-  width: 200%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: nowrap;
-  background: #f7f7f7;
-}
-
-.background_neon {
-  fill: url(#header-shape-gradient) #fff;
-  filter: drop-shadow(2px 4px 6px #aaaaaa);
-  position: absolute;
-}
-
-.half_hexagone {
-  max-width: 400px;
-  width: 30%;
-  height: auto;
-  fill: #c4f765b2;
-  position: absolute;
-  left: 40px;
-}
+// .icon {
+//   filter: drop-shadow(2px 4px 6px #aaaaaa);
+// }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: light;
+  }
+}
+
+.svg-letter {
+  fill: var(--for);
+
+  &-colored {
+    fill: var(--icon-colored-fill);
   }
 }
 

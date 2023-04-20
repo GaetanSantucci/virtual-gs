@@ -2,3 +2,60 @@
   height: 100vh;
   position: relative;
 }
+
+.background_neon {
+  fill: url(#header-shape-gradient);
+  filter: drop-shadow(2px 4px 6px #aaaaaa);
+}
+
+.hexa-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 400px;
+
+  &-effect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    position: absolute;
+    top: 30px;
+  }
+  &-logo {
+    z-index: 98;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & svg {
+      margin-top: 0;
+      width: 50%;
+      & path {
+        fill: var(--icon-light-fill) !important;
+        opacity: 0.2;
+      }
+    }
+  }
+}
+
+.half_hexagone {
+  fill: #c3da55;
+  z-index: 99;
+  // filter: drop-shadow(1px 1px 3px #5e5e5e9c);
+}
+
+.brand {
+  position: absolute;
+  z-index: 100;
+  width: 80%;
+}
+
+.svg-shadow {
+  fill: var(--icon-light-fill);
+  opacity: 0.4;
+  position: absolute;
+  left: 0;
+}

@@ -3,13 +3,16 @@ import './navbar.scss';
 
 import Link from 'next/link';
 
-import { IconContact, IconHome, IconProject, IconService, Logo } from '../SvgComponent';
+import { IconContact, IconHome, IconProject, IconMarketing, IconService, Logo } from '../SvgComponent';
 
 
 const layout = [
   {
     slug: 'home',
     icon: <IconHome />
+  }, {
+    slug: 'marketing',
+    icon: <IconMarketing />
   }, {
     slug: 'service',
     icon: <IconService />
@@ -29,20 +32,20 @@ export const Navbar = () => {
       <Link href='/' onClick={() => { scrollTo(0, 0) }}>
         <Logo />
       </Link>
-      <div className='icon-section'>
+      <ul className='icon-section'>
         {
           layout.map((nav,) => {
             return (
-              <div className='container-icon' key={nav.slug}>
+              <li className='container-icon' key={nav.slug}>
                 <Link href={`#${nav.slug}`}>
                   {nav.icon}
                 </Link>
                 <p>{nav.slug}</p>
-              </div>
+              </li>
             )
           })
         }
-      </div>
+      </ul>
       <Link href='https://www.linkedin.com/in/gaetan-santucci/'>
         <div className='icon-portrait' />
       </Link>

@@ -1,6 +1,6 @@
 "use client";
 
-import { ContactPage, Homepage, Navbar, ProjectPage, ServicePage } from '@/Components';
+import { ContactPage, Homepage, Navbar, ProjectPage, ServicePage, TipsPage } from '@/Components';
 
 import { useEffect, useState } from 'react';
 
@@ -33,18 +33,11 @@ export default function Home() {
   }, []);
   return (
     <div className="slider">
-      <div className={`section ${activeSection === 0 ? "active" : ""}`}>
-        <Homepage />
-      </div>
-      <div className={`section ${activeSection === 1 ? "active" : ""}`}>
-        <ServicePage />
-      </div>
-      <div className={`section ${activeSection === 2 ? "active" : ""}`}>
-        <ProjectPage />
-      </div>
-      <div className={`section ${activeSection === 2 ? "active" : ""}`}>
-        <ContactPage />
-      </div>
+      <Homepage />
+      <ServicePage />
+      <ProjectPage />
+      <TipsPage />
+      <ContactPage />
       <Navbar />
     </div>
   )
