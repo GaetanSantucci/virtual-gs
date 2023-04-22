@@ -4,21 +4,22 @@ import './navbar.scss';
 import Link from 'next/link';
 
 import { IconContact, IconHome, IconProject, IconMarketing, IconService, Logo } from '../SvgComponent';
-
+import { useState, useEffect } from 'react';
 
 const layout = [
   {
     slug: 'home',
-    icon: <IconHome />
+    icon: <IconHome />,
+    active: true
   }, {
     slug: 'marketing',
-    icon: <IconMarketing />
+    icon: <IconMarketing />,
   }, {
     slug: 'service',
-    icon: <IconService />
+    icon: <IconService />,
   }, {
     slug: 'project',
-    icon: <IconProject />
+    icon: <IconProject />,
   }, {
     slug: 'contact',
     icon: <IconContact />
@@ -26,20 +27,40 @@ const layout = [
 ]
 
 export const Navbar = () => {
+  const [activeSection, setActiveSection] = useState('home');
+  console.log('activeSection: ', activeSection);
 
+  useEffect(() => {
+    function handleScroll() {
+      const panels = document.querySelectorAll('.panel');
+      const scrollPosition = window.innerHeight / 2;
+
+      for (let i = 0; i < panels.length; i++) {
+        const panel = panels[i];
+        const rect = panel.getBoundingClientRect();
+        if (scrollPosition >= rect.top && scrollPosition < rect.bottom) {
+          setActiveSection(panel.id);
+          break;
+        }
+      }
+    }
+
+    handleScroll(); // Call the function once to set the initial active section
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <nav className='navbar'>
-      <Link href='/' onClick={() => { scrollTo(0, 0) }}>
-        <Logo />
-      </Link>
+      <a href='#home' ><Logo /></a>
       <ul className='icon-section'>
         {
-          layout.map((nav,) => {
+          layout.map((nav, i) => {
             return (
-              <li className='container-icon' key={nav.slug}>
-                <Link href={`#${nav.slug}`}>
+              <li className={`container-icon ${nav.slug === activeSection ? 'active' : ''}`} key={nav.slug}>
+                <a href={`#${nav.slug}`}>
                   {nav.icon}
-                </Link>
+                </a>
                 <p>{nav.slug}</p>
               </li>
             )

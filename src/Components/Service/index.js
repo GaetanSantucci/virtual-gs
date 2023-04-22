@@ -1,9 +1,9 @@
-import './services.scss';
+import './tips.scss';
 
 export const ServicePage = () => {
   return (
-    <section className='service-container panel'>
-      <h2>Service Page</h2>
+    <section className="tips-container">
+      <h2> Services Page</h2>
     </section>
   )
 }

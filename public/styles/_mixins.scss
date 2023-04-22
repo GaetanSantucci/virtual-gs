@@ -1,0 +1,30 @@
+//~ ------------------------ Display for Section element
+@mixin section($direction: column, $align: center, $justify: center) {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+//~ ------------------------ ANIMATE SVG LINE
+@mixin line-animate(
+  $dasharray,
+  $dashoffset,
+  $anim-name,
+  $anim-duration,
+  $anim-delay,
+  $anim-mode
+) {
+  stroke-dasharray: $dasharray;
+  stroke-dashoffset: $dashoffset;
+  fill: transparent;
+
+  animation-name: $anim-name;
+  animation-duration: $anim-duration;
+  animation-delay: $anim-delay;
+  animation-timing-function: linear;
+  animation-fill-mode: $anim-mode;
+}

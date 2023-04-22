@@ -1,3 +1,5 @@
+@use './mixins';
+
 :root {
   --max-width: 1100px;
   --border-radius: 10px;
@@ -102,16 +104,17 @@
   padding: 0;
   margin: 0;
 }
-html {
-  overflow-y: scroll;
-  height: 100%;
-  -webkit-overflow-scrolling: touch;
-}
+// html {
+//   overflow-y: scroll;
+//   -webkit-overflow-scrolling: touch;
+// }
 
 body {
+  height: 100%;
   overflow-y: visible;
   position: relative;
   height: unset;
+  overflow: hidden;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -123,7 +126,8 @@ body {
 
 html,
 body {
-  overflow-x: hidden;
+  height: auto;
+  // overflow-y: hidden;
 }
 
 a {
@@ -135,6 +139,51 @@ p {
   font-family: var(--font-subtitle);
   color: var(--paragraph-color);
 }
+
+h2 {
+  color: white;
+  // font-size: 2rem;
+  font-family: var(--font-paragraph);
+}
+section {
+  // height: 100vh;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // color: white;
+  // scroll-snap-align: start;
+}
+
+// .container {
+//   height: 100vh;
+//   scroll-snap-type: y mandatory;
+//   overflow-y: auto;
+// }
+
+.panel {
+  height: 100vh;
+  /*   position: sticky; */ /* causes problems! */
+  top: 0;
+}
+
+.one {
+  background-color: lightblue;
+}
+.two {
+  background-color: lightcoral;
+}
+.three {
+  background-color: lightgreen;
+}
+.four {
+  background-color: lightblue;
+}
+.five {
+  background-color: lightpink;
+}
+// section {
+//   @include mixins.section();
+// }
 // .icon {
 //   filter: drop-shadow(2px 4px 6px #aaaaaa);
 // }

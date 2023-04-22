@@ -10,6 +10,7 @@
   z-index: 9999;
   top: 0;
   right: 0;
+  bottom: 0;
   background-color: #ffffff;
   filter: drop-shadow(-2px 0 5px #ececec);
 }
@@ -40,29 +41,29 @@
     transition: all 400ms;
   }
 
-  &:hover {
-    & svg {
-      transition: all 400ms;
-      .svg-ext {
-        fill: var(--icon-colored-fill);
-      }
+  // &:hover {
+  //   & svg {
+  //     transition: all 400ms;
+  //     .svg-ext {
+  //       fill: var(--icon-colored-fill);
+  //     }
 
-      .svg-ins {
-        opacity: 1;
-        fill: var(--foreground-rgb);
-      }
-    }
-    & a {
-      opacity: 0.8;
-      background-color: #caf200;
-      transition: all 400ms;
-    }
-    & p {
-      opacity: 1;
-      visibility: visible;
-      transition: all 400ms;
-    }
-  }
+  //     .svg-ins {
+  //       opacity: 1;
+  //       fill: var(--foreground-rgb);
+  //     }
+  //   }
+  //   & a {
+  //     opacity: 0.8;
+  //     background-color: #caf200;
+  //     transition: all 400ms;
+  //   }
+  //   & p {
+  //     opacity: 1;
+  //     visibility: visible;
+  //     transition: all 400ms;
+  //   }
+  // }
 }
 
 .icon {
@@ -98,6 +99,30 @@
     margin-bottom: 1.4rem;
     filter: drop-shadow(0 2px 2px #838383);
     background: url('/images/portrait.jpg') no-repeat top/100%;
+  }
+}
+
+li.active {
+  & svg {
+    transition: all 400ms;
+    .svg-ext {
+      fill: var(--icon-colored-fill);
+    }
+
+    .svg-ins {
+      opacity: 1;
+      fill: var(--foreground-rgb);
+    }
+  }
+  & a {
+    opacity: 0.8;
+    background-color: #caf200;
+    transition: all 400ms;
+  }
+  & p {
+    opacity: 1;
+    visibility: visible;
+    transition: all 400ms;
   }
 }
 

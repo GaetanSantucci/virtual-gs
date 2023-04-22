@@ -7,12 +7,10 @@ export const Homepage = () => {
       <SvgBackground />
       <SvgBackground back='svg-shadow' />
       <div className='hexa-brand'>
-        <HalfHexagone />
-        <div className='hexa-brand-effect'>
-          <BrandName />
-          <div className='hexa-brand-logo'>
-            <Logo />
-          </div>
+        <BrandName />
+        <div className='hexa-brand-logo'>
+          <Logo />
+          {/* </div> */}
         </div>
       </div>
     </section>
