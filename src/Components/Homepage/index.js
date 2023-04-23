@@ -2,15 +2,24 @@ import './homepage.scss';
 import { HalfHexagone, SvgBackground, BrandName, Logo } from '../SvgComponent';
 
 export const Homepage = () => {
+
+  // var path = window.querySelectorAll('.svg-letter');
+  // path.getTotalLength();
   return (
     <section className='homepage-container'>
       <SvgBackground />
-      <SvgBackground back='svg-shadow' />
+      <div className='background-shadow'>
+        <SvgBackground back='svg-shadow' />
+      </div>
       <div className='hexa-brand'>
-        <BrandName />
-        <div className='hexa-brand-logo'>
-          <Logo />
-          {/* </div> */}
+        <div className='hexa-brand-align'>
+          <div className='hexa-brand-name'>
+            <BrandName />
+          </div>
+          <div className='hexa-brand-logo'>
+            <Logo />
+          </div>
+
         </div>
       </div>
     </section>

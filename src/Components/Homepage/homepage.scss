@@ -3,20 +3,65 @@
 .homepage-container {
   position: relative;
   @include mixins.section();
-  background-color: #caf200;
 }
 
 .hexa-brand {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50px;
-  width: 320px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &-name {
+    width: 300px;
+  }
 
+  .brand {
+    & path {
+      fill: none;
+      &:nth-child(1) {
+        stroke: var(--svg-fill-grey);
+        stroke-dasharray: 179;
+        stroke-dashoffset: 179;
+        animation: dash-line 2s linear forwards;
+      }
+      &:nth-child(2) {
+        stroke: var(--svg-fill-grey);
+      }
+      &:nth-child(3) {
+        stroke: var(--svg-fill-grey);
+      }
+      &:nth-child(4) {
+        stroke: var(--svg-fill-grey);
+      }
+      &:nth-child(5) {
+        stroke: var(--svg-fill-grey);
+      }
+      &:nth-child(6) {
+        stroke: var(--svg-fill-grey);
+      }
+      &:nth-child(7) {
+        stroke: var(--svg-fill-grey);
+      }
+      &:nth-child(8) {
+        stroke: var(--svg-fill-grey);
+      }
+      &:nth-child(9) {
+        stroke: var(--svg-fill-grey);
+      }
+    }
+  }
+
+  &-align {
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 5%;
+  }
   &-logo {
-    // z-index: 99;
-    width: 100%;
+    position: absolute;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,21 +74,13 @@
         stroke: black;
         opacity: 0.2;
       }
-      // .one {
-      //   @include mixins.line-animate(0, 0, dash-line, 4s, 2s, forwards);
-      // }
     }
   }
 }
 
-.brand {
-  position: absolute;
-  z-index: 100;
-  width: 80%;
-}
-
 .background_neon {
-  fill: url(#header-shape-gradient);
+  position: absolute;
+  top: 0;
   filter: drop-shadow(2px 4px 6px #aaaaaa);
 }
 
@@ -51,23 +88,38 @@
   fill: var(--icon-light-fill);
   opacity: 0.4;
   z-index: -1;
-  position: absolute;
-  top: 40px;
-  left: 0;
 }
 
-// @keyframes dash-line {
-//   0% {
-//     opacity: 0.1;
-//     stroke-dasharray: 2000;
-//     stroke-dashoffset: 2000;
-//   }
-//   50% {
-//     opacity: 0.7;
-//   }
-//   100% {
-//     opacity: 0.2;
-//     stroke-dasharray: 100;
-//     stroke-dashoffset: 0;
-//   }
+.background-shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+// svg.brand > #Calque_2 > #Calque_1-2 > .svg-letter:nth-child(1) {
+//   fill: #ffffff;
 // }
+
+@keyframes dash-line {
+  // to {
+  //   stroke-dashoffset: 0;
+  // }
+  0% {
+    opacity: 0.1;
+    // stroke-dasharray: 0;
+    // stroke-dashoffset: 235;
+  }
+  50% {
+    opacity: 0.7;
+    stroke-dashoffset: 0;
+  }
+  95% {
+    stroke-dashoffset: 178;
+  }
+  100% {
+    opacity: 1;
+    // stroke-dasharray: 235;
+    fill: var(--svg-fill-grey);
+  }
+}

@@ -11,13 +11,15 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --paragraph-color: #1e1e1e;
+  --paragraph-color: #292929;
   --foreground-rgb: #f2f2f2;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
   --icon-colored-fill: #6551ff;
   --icon-light-fill: #b4b4b4;
+
+  --svg-fill-grey: #292929;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,

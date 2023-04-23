@@ -50,6 +50,8 @@ export const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+
   return (
     <nav className='navbar'>
       <a href='#home' ><Logo /></a>

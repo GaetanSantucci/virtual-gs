@@ -9,6 +9,7 @@ export const ContactPage = () => {
         <input type="text" placeholder='Entrez votre nom' />
         <input type="textarea" placeholder='Entrez votre message' />
       </form>
+      <div className="contact-background" />
     </section>
   )
 }

@@ -2,13 +2,16 @@
 const SvgBackground = ({ back }) => (
   <svg className={`background_neon ${back}`} xmlns="http://www.w3.org/2000/svg" viewBox="12 14 1366 627">
     {back ? null : <defs>
-      <linearGradient id="header-shape-gradient" x1="50%" y1="0%" x2="50%" y2="100%" gradientTransform="rotate(45)">
-        <stop offset="0%" stopColor="#7A5FFF">
-          <animate attributeName="stop-color" values="#caf200; #a6ff01; #caf200" dur="4s" repeatCount="indefinite"></animate>
+      <linearGradient id="logo-gradient" x1="50%" y1="0%" x2="50%" y2="100%" gradientTransform="rotate(-30)" gradientUnits='userSpaceOnUse'>
+
+        <stop offset="0%" stop-color="#CAF200">
+          <animate attributeName="stop-color" values="#CAF200; #75DD5C; #CAF200" dur="4s" repeatCount="indefinite"></animate>
         </stop>
-        <stop offset="100%" stopColor="#d8f765">
-          <animate attributeName="stop-color" values="#d8f765; #baff5f; #d8f765" dur="4s" repeatCount="indefinite"></animate>
+
+        <stop offset="100%" stop-color="#75DD5C">
+          <animate attributeName="stop-color" values="#75DD5C; #CAF200; #75DD5C" dur="4s" repeatCount="indefinite"></animate>
         </stop>
+
       </linearGradient>
     </defs>}
 
@@ -16,7 +19,7 @@ const SvgBackground = ({ back }) => (
       <g id="Calque_2" data-name="Calque 2">
         <g id="Calque_1-2" data-name="Calque 1">
 
-          <path className="background-neon" d="M1379.29,13.77H13.29V308.52a167.79,167.79,0,0,0,33.39,16.73c246.41,91.7,492.75,183.64,739.6,274,54.88,20.08,107,10.33,150.19-31.88Q1158,350.83,1379.29,134.05Z" />
+          <path className="background-neon" fill='url(#logo-gradient)' d="M1379.29,13.77H13.29V308.52a167.79,167.79,0,0,0,33.39,16.73c246.41,91.7,492.75,183.64,739.6,274,54.88,20.08,107,10.33,150.19-31.88Q1158,350.83,1379.29,134.05Z" />
         </g>
       </g>
     </g></svg>
