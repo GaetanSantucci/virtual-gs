@@ -1,52 +1,74 @@
 'use client';
 import './contact.scss';
 
-import { useRef } from 'react';
+import Link from 'next/link';
+
+import { useEffect, useState } from 'react';
+
+import { ContactBackgroundSVG, BrandName, SubmitBtn, SendMail } from '../SvgComponent';
 
 export const ContactPage = () => {
 
-  const lastnameRef = useRef(null);
-  const firstnameRef = useRef(null);
-  const emailRef = useRef(null);
-  const phoneRef = useRef(null);
-  const messageRef = useRef(null);
+  const [lastname, setLastname] = useState("");
+  console.log('lastname: ', lastname);
+  const [firstname, setFirstname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  console.log('message: ', message);
+  const [modal, setModal] = useState(false);
 
-  const handleFocus = (ref) => {
-    console.log('ref: ', ref.current.name);
-    if (ref.current.name === 'message') {
-      return ref.current.classList.add('focus-message');
-    }
-    ref.current.classList.add('focus');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const email = document.getElementById('plane');
+    const emailBtn = document.querySelector('.contact-btn');
+    const fillColor = document.querySelector('.send-mail path');
+    emailBtn.style.opacity = "0";
+    email.classList.add('letter-flight');
+    fillColor.classList.add('color-change')
+    setTimeout(() => {
+      emailBtn.style.opacity = 1;
+      fillColor.classList.remove('color-change');
+      email.classList.remove('letter-flight');
+    }, 2000);
+
+    console.log('submit le form')
   }
 
-  const handleBlur = (ref) => {
-    if (ref.current.name === 'message') {
-      return ref.current.classList.remove('focus-message');
-    }
-    ref.current.classList.remove('focus');
-  }
+  useEffect(() => {
+
+  })
 
   return (
     <section className="contact-container">
-      <h2>Contact</h2>
+      <div className='contact-background-shadow'>
+        <ContactBackgroundSVG />
+      </div>
+      <h2 className='title'>Contact</h2>
       <form className="contact-form">
         <div className="lastname">
-          <input type="text" placeholder='Entrez votre nom' className='input-text' ref={lastnameRef} onFocus={() => handleFocus(lastnameRef)} onBlur={() => handleBlur(lastnameRef)} />
+          <input type="text" placeholder='Nom' className='input-text' value={lastname} onChange={(e) => setLastname(e.target.value)} required />
         </div>
         <div className="firstname">
-          <input type="text" placeholder='Entrez votre prénom' className='input-text' ref={firstnameRef} onFocus={() => handleFocus(firstnameRef)} onBlur={() => handleBlur(firstnameRef)} />
+          <input type="text" placeholder='Prénom' className='input-text' value={firstname} onChange={(e) => setFirstname(e.target.value)} required />
         </div>
         <div className="email">
-          <input type="email" placeholder='Entrez votre email' className='input-text' ref={emailRef} onFocus={() => handleFocus(emailRef)} onBlur={() => handleBlur(emailRef)} />
+          <input type="email" placeholder='Email' className='input-text' value={email} onChange={(e) => setEmail(e.target.value)} required />
         </div>
         <div className="phone">
-          <input type="tel" placeholder='Entrez votre numéro de téléphone' className='input-text' ref={phoneRef} onFocus={() => handleFocus(phoneRef)} onBlur={() => handleBlur(phoneRef)} />
+          <input type="tel" placeholder='Téléphone' className='input-text' value={phone} onChange={(e) => setPhone(e.target.value)} required />
         </div>
         <div className="message">
-          <textarea name='message' rows="6" cols="60" placeholder='Entrez votre message' className='input-text' ref={messageRef} onFocus={() => handleFocus(messageRef)} onBlur={() => handleBlur(messageRef)} />
+          <textarea name='message' rows="6" cols="60" placeholder='Entrez votre message' className='input-text' value={message} onChange={(e) => setMessage(e.target.value)} required />
         </div>
+        <button type="submit" className="contact-btn" onClick={handleSubmit}><SubmitBtn /></button>
+        <div id='plane' className='send-mail'><SendMail /></div>
       </form>
       <div className="contact-background" />
+      <footer className='footer'>
+        <p>&copy; COPYRIGHT 2023 VIRTUAL GS - Tous droits réservés </p><Link href='#'>Conditions générales</Link>
+      </footer>
+      <div className="contact-brand-name"><BrandName /></div>
     </section>
   )
 }

@@ -4,7 +4,7 @@
   --max-width: 1100px;
   --border-radius: 10px;
 
-  --font-title: 'Cascadia Mono', sans-serif;
+  --font-title: 'Poppins regular', sans-serif;
   --font-paragraph: 'Poppins light', sans-serif;
   --font-subtitle: 'Halcyon regular', sans-serif;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -12,6 +12,10 @@
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
   --primary-dark-color: #292929;
+  --primary-light-color: #f2f2f2;
+  --primary-grey-color: #b4b4b4;
+  --primary-purple-color: #6551ff;
+  --primary-fluo-color: #a3f538;
 
   --paragraph-color: #292929;
   --foreground-rgb: #f2f2f2;
@@ -110,7 +114,6 @@
 }
 // html {
 //   overflow-y: scroll;
-//   -webkit-overflow-scrolling: touch;
 // }
 
 body {
@@ -130,8 +133,7 @@ body {
 
 html,
 body {
-  height: auto;
-  // overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 a {
@@ -149,13 +151,22 @@ h2 {
   // font-size: 2rem;
   font-family: var(--font-paragraph);
 }
-section {
-  // height: 100vh;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // color: white;
-  // scroll-snap-align: start;
+
+// .title {
+//   position: absolute;
+//   transform: translate(-50%, -50%);
+//   top: 50%;
+//   left: 50%;
+//   font-weight: 700;
+//   font-size: 100px;
+//   font-family: 'Poppins regular', sans-serif;
+//   color: #f2f2f2;
+//   text-shadow: -8px -8px 12px rgba(255, 255, 255, 0.4),
+//     8px 8px 12px rgba(0, 0, 0, 0.08);
+// }
+
+textarea {
+  resize: none;
 }
 
 // .container {
@@ -185,12 +196,6 @@ section {
 .five {
   background-color: lightpink;
 }
-// section {
-//   @include mixins.section();
-// }
-// .icon {
-//   filter: drop-shadow(2px 4px 6px #aaaaaa);
-// }
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -216,16 +221,4 @@ section {
 //   100% {
 //     stop-offset: 0%;
 //   }
-// }
-
-// .background_neon stop:nth-child(1) {
-//   animation: animateGradient 4s ease-in-out infinite;
-// }
-
-// .background_neon stop:nth-child(2) {
-//   animation: animateGradient 4s ease-in-out infinite 2s;
-// }
-
-// .background_neon stop:nth-child(3) {
-//   animation: animateGradient 4s ease-in-out infinite 4s;
 // }

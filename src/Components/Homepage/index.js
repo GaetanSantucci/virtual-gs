@@ -9,7 +9,7 @@ export const Homepage = () => {
     <section className='homepage-container'>
       <SvgBackground />
       <div className='background-shadow'>
-        <SvgBackground back='svg-shadow' />
+        <SvgBackground data-background='shadow' />
       </div>
       <div className='hexa-brand'>
         <div className='hexa-brand-align'>
