@@ -1,12 +1,116 @@
 @use '/public/styles/mixins';
 
 .service-container {
-  background-color: rgb(80, 191, 255);
   @include mixins.section();
+  position: relative;
 
-  & h2 {
-    color: white;
-    font-size: 2rem;
-    font-family: var(--font-paragraph);
+  &-background {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    & svg {
+      height: 100%;
+      & rect {
+        fill: var(--primary-grey-color);
+        stroke: var(--primary-purple-color);
+        stroke-opacity: 0.6;
+        opacity: 0.4;
+      }
+      & path {
+        &:nth-child(2) {
+          // stroke: ;
+          fill: var(--primary-light-color);
+          fill-opacity: 0.2;
+        }
+        &:nth-child(3) {
+          fill: var(--primary-purple-color);
+          fill-opacity: 0.6;
+          filter: drop-shadow(2px 2px 2px var(--primary-grey-color));
+        }
+      }
+    }
+
+    &-dot {
+      width: 150px;
+      position: absolute;
+      z-index: -2;
+      bottom: 0;
+      left: 20%;
+      height: auto;
+      & circle {
+        fill: white;
+        fill-opacity: 0.7;
+      }
+    }
+  }
+
+  &-main {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+    &-presentation {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      color: var(--paragraph-color);
+      font-family: var(--font-paragraph);
+      &-title {
+        font-size: 2.4rem;
+        color: var(--font-light-color);
+        font-family: var(--font-title);
+      }
+      &-subtitle {
+        font-size: 1.8rem;
+      }
+      & p {
+        font-family: var(--font-paragraph);
+      }
+    }
+
+    &-benefit {
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      &-card {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-title {
+          margin-bottom: 1rem;
+          font-family: var(--font-title);
+          color: var(--primary-grey-color);
+        }
+
+        &-content {
+          height: 380px;
+          box-shadow: 0 4px 4px var(--primary-grey-color);
+          background-color: var(--foreground-rgb);
+          padding: 1rem;
+          border-radius: 1rem;
+          &-icon {
+          }
+
+          &-figure {
+            font-family: var(--font-bold);
+            font-weight: bold;
+            font-size: 2.4rem;
+            text-align: center;
+          }
+
+          & p {
+            font-family: var(--font-paragraph);
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
   }
 }

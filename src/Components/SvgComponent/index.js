@@ -1,35 +1,33 @@
+'use client';
+import { useEffect } from 'react'
 
-const SvgBackground = ({ back }) => (
-  <svg className={`background_neon ${back}`} xmlns="http://www.w3.org/2000/svg" viewBox="12 14 1366 627">
-    {back ? null : <defs>
+const SvgBackground = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366.03 744.16">
+    <defs>
       <linearGradient id="logo-gradient" x1="50%" y1="0%" x2="50%" y2="100%" gradientTransform="rotate(-30)" gradientUnits='userSpaceOnUse'>
-
-        <stop offset="0%" stopColor="#CAF200">
-          <animate attributeName="stop-color" values="#CAF200; #75DD5C; #CAF200" dur="4s" repeatCount="indefinite"></animate>
+        <stop offset="0%" stopColor="#c3ff0e">
+          <animate attributeName="stop-color" values="#c3ff0e; #CAF538; #c3ff0e" dur="4s" repeatCount="indefinite"></animate>
         </stop>
-
-        <stop offset="100%" stopColor="#75DD5C">
-          <animate attributeName="stop-color" values="#75DD5C; #CAF200; #75DD5C" dur="4s" repeatCount="indefinite"></animate>
+        <stop offset="100%" stopColor="#CAF538">
+          <animate attributeName="stop-color" values="#CAF538; #c3ff0e; #CAF538" dur="4s" repeatCount="indefinite"></animate>
         </stop>
-
       </linearGradient>
-    </defs>}
-
-    <g>
-      <g id="Calque_2" data-name="Calque 2">
-        <g id="Calque_1-2" data-name="Calque 1">
-
-          <path className="background-neon" fill='url(#logo-gradient)' d="M1379.29,13.77H13.29V308.52a167.79,167.79,0,0,0,33.39,16.73c246.41,91.7,492.75,183.64,739.6,274,54.88,20.08,107,10.33,150.19-31.88Q1158,350.83,1379.29,134.05Z" />
-        </g>
-      </g>
-    </g></svg>
+    </defs><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1">
+      <path className="cls-1" d="M1365.32,0H.18V220.13Q43,350.69,86,481.21c17.93,54.39,52.21,95,114.17,108.15,238.92,50.72,477.79,101.67,717,151.17,53.19,11,101.62-2.92,139.32-43.34q154.58-165.72,308.83-331.71Z" />
+      <path className="cls-2" fill="url(#logo-gradient)" d="M1366,.24H0V295.08a168.63,168.63,0,0,0,33.39,16.74c246.41,91.72,492.75,183.69,739.6,274,54.88,20.09,107,10.34,150.19-31.89Q1144.73,337.41,1366,120.55Z" />
+      <path className="cls-3" d="M1366,104.07c-6.34-4.91-15.52-11.84-26.89-19.79C1319.8,70.75,1315,68.71,1312.65,68c-13.28-3.85-27.9-2.5-44.5,3.46-83.44,30-167,59.25-250.62,88.63-23.38,8.22-38.76,23.78-45,47.54-23.21,88.12-46,176.3-69.35,264.4-3.52,13.3-3.34,25,.29,35.32,3.89,11.06,12.65,19.6,15.43,22.46a83.37,83.37,0,0,0,15.93,12.76L1366,120.72Z" />
+      <path className="cls-4" d="M0,138.24a48.13,48.13,0,0,0,22,26.13C88.8,202,155.76,239.25,222.45,277.15c19.1,10.86,36.24,9.66,53.71-3.28,30.36-22.48,61.22-44.14,91.87-66.14,29.85-21.43,59.23-43.75,89.73-64,21.21-14.08,29.63-33.56,28.47-60.82Q484.46,41.65,482.89.4L0,.44Z" />
+    </g></g>
+  </svg>
 )
 
-const HalfHexagone = () => {
+const Hexagone = () => {
   return (
-    <svg className='half_hexagone' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.06 284.12"><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path d="M0,137.8A46,46,0,0,0,21.7,164c66.83,37.6,133.79,74.88,200.48,112.79,19.1,10.85,36.24,9.65,53.71-3.28,30.36-22.48,61.22-44.14,91.87-66.15,29.85-21.43,59.23-43.75,89.73-64,21.21-14.07,29.63-33.56,28.47-60.82Q484.19,41.27,482.62,0H0Z" /></g></g></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174 196"><defs></defs><g className="cls-1"><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path className="cls-3" d="M149.58,91.46c0,10.25-.16,20.5-.05,30.75.06,5.9-2.25,10.11-7.37,13.13-17.84,10.54-35.6,21.23-53.4,31.85a11.6,11.6,0,0,1-12.52,0Q49,150.88,21.91,134.39c-4.69-2.84-6.39-7.31-6.38-12.52q0-31.17.18-62.32A13.61,13.61,0,0,1,22.78,47c17.74-10.49,35.41-21.1,53.13-31.61,4.77-2.84,9.56-2.65,14.32.23,17,10.3,34.07,20.62,51.18,30.79,5.83,3.46,8.61,8.12,8.35,15.06C149.38,71.48,149.61,81.47,149.58,91.46Z" /></g></g></g></svg>
   )
 }
+
+
 
 const IconHome = () => {
   return (
@@ -102,7 +100,7 @@ const IconContact = () => {
 
 const Logo = () => {
   return (
-    <svg className='icon icon-logo' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186.55 186.03" >
+    <svg id='header-logo' className='icon icon-logo' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 186.55 186.03" >
       <g id="Calque_2" data-name="Calque 2">
         <g id="Calque_1-2" data-name="Calque 1">
           <g id="Calque_2-2" data-name="Calque 2">
@@ -180,4 +178,107 @@ const SendMail = () => {
   )
 }
 
-export { SvgBackground, HalfHexagone, IconHome, IconService, IconProject, IconMarketing, IconContact, Logo, BrandName, ContactBackgroundSVG, SubmitBtn, SendMail };
+const BackgroundMarketing = () => {
+
+  return (
+    <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1365.68 515.05">
+      <defs>
+      </defs>
+      <g id="Calque_1-2" data-name="Calque 1">
+        <rect class="cls-1" x=".5" y=".5" width="1364.68" height="514.05" />
+        <path class="cls-1" d="m81.68,154.48c6.17,14.52,15.75,24.72,30.94,26.48,58.6,6.78,117.19,13.62,175.82,20.05,13.03,1.43,24.06-3.9,31.62-16.24,32.3-52.79,64.39-105.73,96.89-158.37,5.32-8.62,7.87-17.14,7.74-25.9H16.5c21.68,51.35,43.38,102.69,65.18,153.98Z" />
+        <path class="cls-1" d="m298.55,389.2c-.02,6.96-.11,13.93-.03,20.89.04,4.01-1.53,6.86-5,8.92-12.12,7.16-24.18,14.42-36.27,21.63-2.83,1.69-5.76,1.61-8.5-.03-12.33-7.37-24.61-14.81-36.9-22.25-3.19-1.93-4.34-4.96-4.34-8.51.02-14.11.06-28.22.12-42.32.01-3.71,1.52-6.56,4.81-8.51,12.05-7.13,24.05-14.33,36.08-21.47,3.25-1.93,6.5-1.79,9.73.16,11.57,6.99,23.14,14,34.76,20.91,3.96,2.35,5.84,5.52,5.67,10.23-.25,6.77-.1,13.56-.12,20.35Z" />
+      </g>
+    </svg>
+  )
+}
+
+const BackgroundProject = () => {
+
+  return (
+    <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1919.35 664">
+      <defs>
+
+      </defs>
+      <g id="Calque_1-2" data-name="Calque 1">
+        <g>
+          <rect class="cls-1" x=".5" y=".5" width="1918.35" height="663" />
+          <path d="m1918.35,1v662H1V1h1917.35m1-1H0v664h1919.35V0h0Z" />
+        </g>
+        <g>
+          <path d="m387.72,297.1c12.97,0,25.68,4.57,38.86,13.99,58.78,41.97,118.75,84.27,176.74,125.17,28.75,20.28,58.48,41.24,87.69,61.91,13.74,9.72,22.56,22.89,26.23,39.15l-12.56,125.69H24.4c1.57-38.6,4.14-77.84,7.66-116.66,1.39-15.33,3.29-36.32,17.87-55.85,7.48-10.03,17.28-18.17,29.96-24.91,31.89-16.94,63.68-35.71,94.41-53.85,13.12-7.74,26.68-15.75,40.07-23.51,13.57-7.86,27.39-15.81,40.76-23.5,31.88-18.34,64.85-37.31,97-56.57,12.4-7.43,24.04-11.04,35.59-11.04m0-1c-11.79,0-23.71,3.76-36.11,11.18-45.62,27.34-91.8,53.44-137.75,80.07-44.75,25.93-88.97,53.18-134.45,77.34-12.79,6.79-22.78,15.13-30.29,25.19-14.4,19.29-16.59,40.07-18.06,56.36-3.67,40.55-6.18,79.75-7.7,117.75h682.23l12.67-126.75c-3.62-16.24-12.47-29.87-26.66-39.91-88.15-62.35-176.52-124.29-264.43-187.07-13.28-9.49-26.27-14.17-39.44-14.17h0Z" />
+          <path d="m1443.92,1c-26.07,71.4-47.24,127.91-58.65,158.35-2.73,7.29-4.93,13.16-6.54,17.47-1.5,4.04-5.5,14.77-15.6,22.97-6.16,5-13.84,8.4-22.82,10.09-41.21,7.76-83.08,15.8-123.57,23.58-30.81,5.92-62.67,12.04-94.02,17.99-3.48.66-6.9,1-10.17,1-14.27,0-26.66-6.44-36.81-19.13l-14.36-17.95c-39.28-49.1-79.9-99.87-120.2-149.51-8.05-9.92-12.65-19.67-14.06-29.8-.49-3.55-1.62-16.23,4.58-30.49.67-1.55,1.42-3.09,2.23-4.57h509.98M1445.35,0h-512c-.69,1.24-1.61,3-2.56,5.17-5.49,12.63-5.53,24.71-4.65,31.02,1.46,10.52,6.28,20.45,14.27,30.3,45.13,55.59,89.82,111.54,134.56,167.46,10.23,12.78,22.7,19.5,37.59,19.5,3.33,0,6.78-.34,10.35-1.01,72.54-13.77,145.02-27.91,217.59-41.57,9.3-1.75,17.01-5.21,23.27-10.3,10.32-8.39,14.35-19.23,15.91-23.41C1388.08,154.61,1412.86,89.01,1445.35,0h0Z" />
+        </g>
+      </g>
+    </svg>
+  )
+}
+
+const Dot = () => {
+  return (
+    <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111.82 178.35">
+      <defs>
+      </defs>
+      <g id="Calque_1-2" data-name="Calque 1">
+        <g>
+          <circle class="cls-1" cx="4.02" cy="4.02" r="4.02" />
+          <circle class="cls-1" cx="24.78" cy="4.02" r="4.02" />
+          <circle class="cls-1" cx="45.53" cy="4.02" r="4.02" />
+          <circle class="cls-1" cx="66.29" cy="4.02" r="4.02" />
+          <circle class="cls-1" cx="87.05" cy="4.02" r="4.02" />
+          <circle class="cls-1" cx="107.8" cy="4.02" r="4.02" />
+          <circle class="cls-1" cx="4.02" cy="25.31" r="4.02" />
+          <circle class="cls-1" cx="24.78" cy="25.31" r="4.02" />
+          <circle class="cls-1" cx="45.53" cy="25.31" r="4.02" />
+          <circle class="cls-1" cx="66.29" cy="25.31" r="4.02" />
+          <circle class="cls-1" cx="87.05" cy="25.31" r="4.02" />
+          <circle class="cls-1" cx="107.8" cy="25.31" r="4.02" />
+          <circle class="cls-1" cx="4.02" cy="46.6" r="4.02" />
+          <circle class="cls-1" cx="24.78" cy="46.6" r="4.02" />
+          <circle class="cls-1" cx="45.53" cy="46.6" r="4.02" />
+          <circle class="cls-1" cx="66.29" cy="46.6" r="4.02" />
+          <circle class="cls-1" cx="87.05" cy="46.6" r="4.02" />
+          <circle class="cls-1" cx="107.8" cy="46.6" r="4.02" />
+          <circle class="cls-1" cx="4.02" cy="67.89" r="4.02" />
+          <circle class="cls-1" cx="24.78" cy="67.89" r="4.02" />
+          <circle class="cls-1" cx="45.53" cy="67.89" r="4.02" />
+          <circle class="cls-1" cx="66.29" cy="67.89" r="4.02" />
+          <circle class="cls-1" cx="87.05" cy="67.89" r="4.02" />
+          <circle class="cls-1" cx="107.8" cy="67.89" r="4.02" />
+          <circle class="cls-1" cx="4.02" cy="89.17" r="4.02" />
+          <circle class="cls-1" cx="24.78" cy="89.17" r="4.02" />
+          <circle class="cls-1" cx="45.53" cy="89.17" r="4.02" />
+          <circle class="cls-1" cx="66.29" cy="89.17" r="4.02" />
+          <circle class="cls-1" cx="87.05" cy="89.17" r="4.02" />
+          <circle class="cls-1" cx="107.8" cy="89.17" r="4.02" />
+          <circle class="cls-1" cx="4.02" cy="110.46" r="4.02" />
+          <circle class="cls-1" cx="24.78" cy="110.46" r="4.02" />
+          <circle class="cls-1" cx="45.53" cy="110.46" r="4.02" />
+          <circle class="cls-1" cx="66.29" cy="110.46" r="4.02" />
+          <circle class="cls-1" cx="87.05" cy="110.46" r="4.02" />
+          <circle class="cls-1" cx="107.8" cy="110.46" r="4.02" />
+          <circle class="cls-1" cx="4.02" cy="131.75" r="4.02" />
+          <circle class="cls-1" cx="24.78" cy="131.75" r="4.02" />
+          <circle class="cls-1" cx="45.53" cy="131.75" r="4.02" />
+          <circle class="cls-1" cx="66.29" cy="131.75" r="4.02" />
+          <circle class="cls-1" cx="87.05" cy="131.75" r="4.02" />
+          <circle class="cls-1" cx="107.8" cy="131.75" r="4.02" />
+          <circle class="cls-1" cx="4.02" cy="153.04" r="4.02" />
+          <circle class="cls-1" cx="24.78" cy="153.04" r="4.02" />
+          <circle class="cls-1" cx="45.53" cy="153.04" r="4.02" />
+          <circle class="cls-1" cx="66.29" cy="153.04" r="4.02" />
+          <circle class="cls-1" cx="87.05" cy="153.04" r="4.02" />
+          <circle class="cls-1" cx="107.8" cy="153.04" r="4.02" />
+          <circle class="cls-1" cx="4.02" cy="174.33" r="4.02" />
+          <circle class="cls-1" cx="24.78" cy="174.33" r="4.02" />
+          <circle class="cls-1" cx="45.53" cy="174.33" r="4.02" />
+          <circle class="cls-1" cx="66.29" cy="174.33" r="4.02" />
+          <circle class="cls-1" cx="87.05" cy="174.33" r="4.02" />
+          <circle class="cls-1" cx="107.8" cy="174.33" r="4.02" />
+        </g>
+      </g>
+    </svg>
+  )
+}
+
+export { Dot, BackgroundMarketing, BackgroundProject, SvgBackground, Hexagone, IconHome, IconService, IconProject, IconMarketing, IconContact, Logo, BrandName, ContactBackgroundSVG, SubmitBtn, SendMail };

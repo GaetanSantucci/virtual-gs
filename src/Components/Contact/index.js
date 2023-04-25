@@ -1,36 +1,66 @@
 'use client';
 import './contact.scss';
 
+import axios from 'axios';
+
 import Link from 'next/link';
 
 import { useEffect, useState } from 'react';
 
+// Svg import 
 import { ContactBackgroundSVG, BrandName, SubmitBtn, SendMail } from '../SvgComponent';
 
 export const ContactPage = () => {
 
   const [lastname, setLastname] = useState("");
-  console.log('lastname: ', lastname);
   const [firstname, setFirstname] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  console.log('message: ', message);
   const [modal, setModal] = useState(false);
+
+  const resetData = () => {
+    setLastname('');
+    setFirstname('');
+    setEmail('');
+    setPhone('');
+    setMessage('');
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const email = document.getElementById('plane');
+
+    // select button element to add animation
+    const emailPlane = document.getElementById('plane');
     const emailBtn = document.querySelector('.contact-btn');
     const fillColor = document.querySelector('.send-mail path');
-    emailBtn.style.opacity = "0";
-    email.classList.add('letter-flight');
-    fillColor.classList.add('color-change')
-    setTimeout(() => {
-      emailBtn.style.opacity = 1;
-      fillColor.classList.remove('color-change');
-      email.classList.remove('letter-flight');
-    }, 2000);
+
+    const formData = {
+      lastname,
+      firstname,
+      email,
+      phone,
+      message
+    };
+    console.log('formData: ', formData);
+
+    axios.post('http://localhost:8888/api/v1/contact', formData)
+      .then(response => {
+        console.log(response.data);
+        emailBtn.style.opacity = "0";
+        emailPlane.classList.add('letter-flight');
+        fillColor.classList.add('color-change');
+
+        resetData();
+        setTimeout(() => {
+          emailBtn.style.opacity = 1;
+          fillColor.classList.remove('color-change');
+          emailPlane.classList.remove('letter-flight');
+        }, 2000);
+      })
+      .catch(error => {
+        console.log(error);
+      });
 
     console.log('submit le form')
   }

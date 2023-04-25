@@ -1,6 +1,5 @@
 @use '/public/styles/mixins';
 
 .tips-container {
-  background-color: lightpink;
   @include mixins.section();
 }

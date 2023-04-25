@@ -1,7 +1,7 @@
 @use '/public/styles/mixins';
 
 .project-container {
-  background-color: rgb(160, 255, 137);
+  // background-color: rgb(160, 255, 137);
   @include mixins.section();
 
   & h2 {

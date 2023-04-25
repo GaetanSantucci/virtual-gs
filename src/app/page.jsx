@@ -1,9 +1,7 @@
 "use client";
 
-import './fullpage.scss';
-
-import { ContactPage, Homepage, Navbar, ProjectPage, MarketingPage, ServicePage, SnapScroll } from '@/Components';
-import { useState, useEff, useEffect } from 'react';
+import { ContactPage, Homepage, Navbar, ProjectPage, MarketingPage, ServicePage } from '@/Components';
+import {  useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollToPlugin, ScrollTrigger } from 'gsap/all';
 

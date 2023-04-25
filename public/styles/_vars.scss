@@ -9,6 +9,16 @@
 }
 
 @font-face {
+  font-family: 'Poppins bold';
+  src: url('/public/fonts/Poppins-Bold.ttf') format('opentype');
+}
+
+@font-face {
   font-family: 'Halcyon regular';
   src: url('/public/fonts/Halcyon-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Roboto light';
+  src: url('/public/fonts/RobotoMono-Light.ttf') format('opentype');
 }

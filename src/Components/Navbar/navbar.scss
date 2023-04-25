@@ -40,39 +40,15 @@
     visibility: hidden;
     transition: all 400ms;
   }
-
-  // &:hover {
-  //   & svg {
-  //     transition: all 400ms;
-  //     .svg-ext {
-  //       fill: var(--icon-colored-fill);
-  //     }
-
-  //     .svg-ins {
-  //       opacity: 1;
-  //       fill: var(--foreground-rgb);
-  //     }
-  //   }
-  //   & a {
-  //     opacity: 0.8;
-  //     background-color: #caf200;
-  //     transition: all 400ms;
-  //   }
-  //   & p {
-  //     opacity: 1;
-  //     visibility: visible;
-  //     transition: all 400ms;
-  //   }
-  // }
 }
 
 .icon {
   width: 25px;
-  filter: drop-shadow(1px 2px 3px var(--icon-colored-fill));
+  filter: drop-shadow(1px 2px 3px var(--primary-purple-color));
   transition: all 400ms;
 
   &:hover {
-    filter: drop-shadow(1px 2px 3px var(--icon-light-fill));
+    filter: drop-shadow(1px 2px 3px var(--primary-grey-color));
     transition: all 200ms;
   }
 
@@ -126,8 +102,8 @@ li.active {
   }
 }
 
-.container-icon:hover {
-}
+// .container-icon:hover {
+// }
 
 .svg-ext {
   fill: var(--icon-light-fill);
