@@ -17,7 +17,8 @@ export const MarketingPage = () => {
               <div className='service-container-main-benefit-card-content-icon'>Icon</div>
               <div className='service-container-main-benefit-card-content-figure'>75%</div>
               <p>Des internautes ne vont pas plus loin que la 1ère page de recherche Google</p>
-              <p>C&apos;est pourquoi il est important d&apos;adapter une bonne stratégie  afin d&apos;optimiser son référencement naturel. Chez VirtualGS, nous utilisons des outils adaptés et mettons en place les bonnes pratiques.</p>
+              <p>C&apos;est pourquoi il est important d&apos;adapter une bonne stratégie  afin d&apos;optimiser son référencement naturel.</p>
+              <p>Chez VirtualGS, nous utilisons des outils adaptés et mettons en place les bonnes pratiques.</p>
             </div>
           </div>
           <div className='service-container-main-benefit-card'>
@@ -46,6 +47,9 @@ export const MarketingPage = () => {
       </div>
       <div className='service-container-background-dot'>
         <Dot />
+      </div>
+      <div className='sticky-container'>
+        <p>02</p>
       </div>
     </section>
   )
