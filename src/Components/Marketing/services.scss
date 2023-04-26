@@ -12,10 +12,10 @@
     & svg {
       height: 100%;
       & rect {
-        fill: var(--primary-grey-color);
-        stroke: var(--primary-purple-color);
-        stroke-opacity: 0.6;
-        opacity: 0.4;
+        fill: var(--primary-purple-color);
+        // stroke: var(--primary-grey-color);
+        // stroke-opacity: 0.6;
+        opacity: 0.6;
       }
       & path {
         &:nth-child(2) {
@@ -24,9 +24,9 @@
           fill-opacity: 0.2;
         }
         &:nth-child(3) {
-          fill: var(--primary-light-color);
+          fill: var(--primary-dark-color);
           fill-opacity: 0.6;
-          filter: drop-shadow(2px 2px 2px var(--primary-grey-color));
+          // filter: drop-shadow(2px 2px 2px var(--primary-dark-color));
         }
       }
     }
@@ -39,8 +39,8 @@
       left: 20%;
       height: auto;
       & circle {
-        fill: var(--primary-purple-color);
-        fill-opacity: 0.7;
+        fill: var(--primary-grey-color);
+        fill-opacity: 0.6;
       }
     }
   }
@@ -70,7 +70,9 @@
       }
       & p {
         font-family: var(--font-paragraph);
-        margin-top: 2rem;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: var(--font-light-color);
       }
     }
 
@@ -88,17 +90,47 @@
 
         &-title {
           margin-bottom: 1rem;
-          font-family: var(--font-title);
+          letter-spacing: 1.4px;
+          font-family: var(--font-paragraph);
           color: var(--primary-grey-color);
+          filter: drop-shadow(2px 2px 4px var(--primary-purple-color));
+          transition: all 400ms;
         }
 
         &-content {
-          height: 380px;
-          box-shadow: 0 4px 4px var(--primary-grey-color);
-          background-color: var(--foreground-rgb);
-          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          height: 430px;
+          background-color: #ffffff;
+          padding: 0 1rem 1rem 1rem;
           border-radius: 1rem;
+          transition: all 400ms;
+          &:hover {
+            transition: all 400ms;
+            // animation: gradient-animation 3.5s linear infinite;
+            background-color: #caf538;
+            filter: drop-shadow(0 2px 6px var(--primary-purple-color));
+
+            .icon-card {
+              fill: var(--primary-light-color);
+              transition: all 400ms;
+            }
+          }
+
           &-icon {
+            width: 120px;
+
+            & svg {
+              .icon-card {
+                transition: all 400ms;
+                fill: var(--primary-fluo-color);
+
+                &-stroke {
+                  fill: var(--primary-dark-color);
+                }
+              }
+            }
           }
 
           &-figure {
@@ -114,21 +146,50 @@
             margin-bottom: 0.6rem;
           }
         }
+
+        &:hover {
+          & h3 {
+            color: var(--primary-light-color);
+            transition: all 400ms;
+          }
+        }
       }
     }
   }
 }
 
+.service-container-main-benefit-card:hover {
+  &-title {
+    color: #ffffff;
+  }
+}
+
 .sticky-container {
-  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 120px;
   position: absolute;
-  top: 25px;
-  left: 0;
+  left: 150px;
+  top: 0;
   background-color: var(--primary-fluo-color);
   text-align: end;
-  padding: 1rem;
+  padding: 0 0.6rem 1rem 0.6rem;
+  animation: first-stop 3.5s infinite;
   & p {
-    font-size: 1.2rem;
-    font-family: var(--font-index-page);
+    font-size: 1.4rem;
+    font-family: var(--font-index);
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-image: linear-gradient(to bottom, #b0ff07, #caf538);
+  }
+  50% {
+    background-image: linear-gradient(to bottom, #caf538, #b0ff07);
+  }
+  100% {
+    background-image: linear-gradient(to bottom, #b0ff07, #caf538);
   }
 }
