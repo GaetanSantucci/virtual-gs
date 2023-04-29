@@ -3,10 +3,142 @@
 .project-container {
   // background-color: rgb(160, 255, 137);
   @include mixins.section();
+  position: relative;
 
-  & h2 {
-    color: white;
-    font-size: 2rem;
+  overflow: hidden;
+  &-background {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    & svg {
+      height: 100%;
+      & path {
+        &:nth-child(1) {
+          fill-opacity: 0.4;
+          fill: var(--primary-purple-color);
+        }
+        &:nth-child(2) {
+          fill: var(--primary-purple-color);
+          fill-opacity: 0.7;
+        }
+        &:nth-child(3) {
+          fill: var(--primary-purple-color);
+          fill-opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &-main {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+
+    &-content {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+
+      &-card {
+        position: relative;
+        overflow: hidden;
+        width: 500px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f2f2f2;
+        cursor: pointer;
+
+        &-presentation {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: all 1000ms;
+          color: #555555;
+
+          &-title {
+            color: var(--prmary-dark-color);
+          }
+          & p {
+            font-family: var(--font-paragraph);
+          }
+
+          &-separate {
+            border-top: 1px solid #6651ff;
+            width: 150px;
+            height: 1px;
+            display: block;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: center;
+          transition: all 1000ms;
+          opacity: 0;
+        }
+
+        &:hover {
+          .project-container-main-content-card-presentation {
+            transition: all 800ms;
+            opacity: 0.2;
+            transform: scale(0);
+          }
+          .project-container-main-content-card-presentation-separate {
+            animation: line 600ms linear forwards;
+          }
+          img,
+          .project-message {
+            transition: all 800ms;
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.project-message {
+  transition: all 1000ms;
+  padding: 1rem;
+  opacity: 0;
+  & h2,
+  p {
+    color: var(--primary-purple-color);
+  }
+  & p {
     font-family: var(--font-paragraph);
+  }
+
+  & span {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+@keyframes line {
+  0% {
+    width: 150px;
+  }
+  20% {
+    width: 15px;
+  }
+  100% {
+    width: 0;
   }
 }

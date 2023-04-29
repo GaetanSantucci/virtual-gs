@@ -3,8 +3,9 @@
 .service-container {
   @include mixins.section();
   position: relative;
-
+  margin-left: -25px;
   &-background {
+    height: 100%;
     position: absolute;
     right: 0;
     left: 0;
@@ -13,20 +14,17 @@
       height: 100%;
       & rect {
         fill: var(--primary-purple-color);
-        // stroke: var(--primary-grey-color);
-        // stroke-opacity: 0.6;
+
         opacity: 0.6;
       }
       & path {
         &:nth-child(2) {
-          // stroke: ;
           fill: var(--primary-light-color);
           fill-opacity: 0.2;
         }
         &:nth-child(3) {
           fill: var(--primary-dark-color);
           fill-opacity: 0.6;
-          // filter: drop-shadow(2px 2px 2px var(--primary-dark-color));
         }
       }
     }
@@ -46,6 +44,7 @@
   }
 
   &-main {
+    margin-left: -50px;
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -108,10 +107,12 @@
           transition: all 400ms;
           &:hover {
             transition: all 400ms;
-            // animation: gradient-animation 3.5s linear infinite;
             background-color: #caf538;
             filter: drop-shadow(0 2px 6px var(--primary-purple-color));
-
+            & svg {
+              filter: drop-shadow(0 2px 2px var(--primary-grey-color));
+              transition: all 400ms;
+            }
             .icon-card {
               fill: var(--primary-light-color);
               transition: all 400ms;
@@ -122,6 +123,7 @@
             width: 120px;
 
             & svg {
+              transition: all 400ms;
               .icon-card {
                 transition: all 400ms;
                 fill: var(--primary-fluo-color);

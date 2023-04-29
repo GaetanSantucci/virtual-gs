@@ -14,11 +14,11 @@ export const ContactPage = () => {
 
   const [lastname, setLastname] = useState("");
   const [firstname, setFirstname] = useState("");
+  console.log('firstname:', firstname);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const [modal, setModal] = useState(false);
-
+  console.log();
   const resetData = () => {
     setLastname('');
     setFirstname('');
@@ -26,6 +26,7 @@ export const ContactPage = () => {
     setPhone('');
     setMessage('');
   }
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
