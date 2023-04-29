@@ -1,14 +1,26 @@
 "use client";
 
 import { ContactPage, Homepage, Navbar, ProjectPage, MarketingPage, ServicePage } from '@/Components';
-import {  useEffect } from 'react';
+import {  useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollToPlugin, ScrollTrigger } from 'gsap/all';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 export default function Home() {
 
+  // const [position, setPosition] = useState({ x: 0, y: 0 });
+
   useEffect(() =>{
+
+    // const handleMousMove = (e) => {
+    //   const x = Math.round((e.pageX / 3) * 0.1);
+    //   const y = Math.round((e.pageY / 3) * 0.1);
+    //   setPosition({ x, y });
+    // }
+
+    // window.addEventListener('mousemove', (e) => {
+    //   handleMousMove(e);
+    // })
 
 let panels = gsap.utils.toArray(".panel"),
     observer = ScrollTrigger.normalizeScroll(true),

@@ -1,5 +1,100 @@
 @use '/public/styles/mixins';
 
-.tips-container {
+.service-container {
   @include mixins.section();
+  margin-left: 0;
+
+  &-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    & svg {
+      width: 100%;
+    }
+
+    &-picture {
+      width: 80%;
+      position: absolute;
+      bottom: 10px;
+      margin-left: 80px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      & img {
+        width: 30%;
+        height: auto;
+      }
+
+      & svg {
+        width: 18%;
+      }
+    }
+  }
+
+  .service {
+    &-hexagone {
+      fill: none;
+      stroke: var(--primary-fluo-color);
+      stroke-width: 2px;
+    }
+    &-paragraph {
+      fill: var(--paragraph-color);
+    }
+
+    &-layout {
+      fill: none;
+      stroke: var(--primary-purple-color);
+      stroke-width: 2px;
+      stroke-dasharray: 1455;
+      stroke-dashoffset: 1455;
+    }
+
+    &-circle {
+      fill: none;
+      stroke: var(--primary-purple-color);
+      stroke-width: 1px;
+      opacity: 0.5;
+      animation: sonar 2s infinite;
+      transform-origin: center;
+
+      &-center {
+        fill: var(--primary-purple-color);
+        stroke: none;
+      }
+    }
+
+    &-dot-circle {
+      fill-opacity: 0.2;
+      fill: var(--primary-purple-color);
+    }
+  }
+}
+
+.animate-dash {
+  animation: dash 4s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes sonar {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }

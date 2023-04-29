@@ -1,16 +1,26 @@
-import { BackgroundProject } from '../SvgComponent';
+'use client';
+import { ServiceDot, ServiceLayout } from '../SvgComponent/serviceSvg';
 import './service.scss';
 import Image from 'next/image';
+import { useEffect } from 'react';
 
 export const ServicePage = () => {
+
+  useEffect(() => {
+    const serviceLayout = document.querySelector('.service-layout');
+    serviceLayout.classList.add('animate-dash');
+  }, []);
+
   return (
     <section className="service-container">
       <div className="service-container-main">
-        <h2 className='service-container-main-title'>Service</h2>
+        <ServiceLayout />
+        <div className="service-container-main-picture">
+          <ServiceDot />
+          <Image src='/images/gaetan_santucci.png' width={400} height={400} priority alt='Photo de Gaetan Santucci' />
+        </div>
       </div>
-      <div className='service-container-background'>
-        {/* <BackgroundProject /> */}
-      </div>
+
     </section>
   )
 }

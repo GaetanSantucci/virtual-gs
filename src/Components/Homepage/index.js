@@ -10,11 +10,11 @@ export const Homepage = () => {
   return (
     <section className='homepage-container'>
       <div className='homepage-container-header'>
-        <div className='homepage-container-header-logo-svg'>
+        <div className='homepage-container-header-logo-svg' >
           <Logo />
         </div>
         <div className='homepage-container-header-logo'>
-          <div className='homepage-container-header-logo-name'>
+          <div className='homepage-container-header-logo-name' >
             <BrandName />
           </div>
         </div>

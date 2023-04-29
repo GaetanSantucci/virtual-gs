@@ -1,9 +1,8 @@
 @use '/public/styles/mixins';
 
-.service-container {
+.marketing-container {
   @include mixins.section();
   position: relative;
-  margin-left: -25px;
   &-background {
     height: 100%;
     position: absolute;
@@ -44,7 +43,6 @@
   }
 
   &-main {
-    margin-left: -50px;
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -160,7 +158,7 @@
   }
 }
 
-.service-container-main-benefit-card:hover {
+.marketing-container-main-benefit-card:hover {
   &-title {
     color: #ffffff;
   }

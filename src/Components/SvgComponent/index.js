@@ -1,6 +1,3 @@
-'use client';
-import { useEffect } from 'react'
-
 const SvgBackground = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366.03 744.16">
     <defs>
