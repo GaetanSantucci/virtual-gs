@@ -1,18 +1,19 @@
 'use client';
-import { ServiceDot, ServiceLayout } from '../SvgComponent/serviceSvg';
+import { ServiceDot, ServiceHexagone, ServiceLayout, ServiceTitle } from '../SvgComponent/serviceSvg';
 import './service.scss';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export const ServicePage = () => {
+  const [svgLength, setsvgLength] = useState()
 
-  useEffect(() => {
-    const serviceLayout = document.querySelector('.service-layout');
-    serviceLayout.classList.add('animate-dash');
-  }, []);
 
   return (
     <section className="service-container">
+      <ServiceHexagone />
+      <div className='service-container-title'>
+        <ServiceTitle />
+      </div>
       <div className="service-container-main">
         <ServiceLayout />
         <div className="service-container-main-picture">

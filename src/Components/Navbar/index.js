@@ -28,7 +28,6 @@ const layout = [
 
 export const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
-  console.log('activeSection: ', activeSection);
 
   useEffect(() => {
     function handleScroll() {

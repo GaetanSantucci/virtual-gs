@@ -3,6 +3,16 @@
 .service-container {
   @include mixins.section();
   margin-left: 0;
+  position: relative;
+  overflow: hidden;
+
+  &-title {
+    position: absolute;
+    top: 50px;
+    & svg {
+      width: 120%;
+    }
+  }
 
   &-main {
     display: flex;
@@ -19,8 +29,8 @@
     &-picture {
       width: 80%;
       position: absolute;
-      bottom: 10px;
-      margin-left: 80px;
+      bottom: 20px;
+      margin-left: 90px;
       display: flex;
       align-items: baseline;
       justify-content: space-between;
@@ -41,6 +51,15 @@
       fill: none;
       stroke: var(--primary-fluo-color);
       stroke-width: 2px;
+
+      &-left {
+        position: absolute;
+        width: 25%;
+        left: -100px;
+        top: -100px;
+        transform: rotate(90deg);
+        fill: var(--primary-fluo-color);
+      }
     }
     &-paragraph {
       fill: var(--paragraph-color);
@@ -52,19 +71,38 @@
       stroke-width: 2px;
       stroke-dasharray: 1455;
       stroke-dashoffset: 1455;
+      animation: dash 4s linear forwards;
     }
 
     &-circle {
       fill: none;
       stroke: var(--primary-purple-color);
       stroke-width: 1px;
-      opacity: 0.5;
-      animation: sonar 2s infinite;
-      transform-origin: center;
+      transform-box: fill-box;
+
+      // &:hover {
+      //   stroke-dasharray: 600;
+      //   stroke-dashoffset: 600;
+      // }
 
       &-center {
         fill: var(--primary-purple-color);
-        stroke: none;
+        stroke: var(--primary-purple-color);
+        stroke-width: 2px;
+        stroke-opacity: 1;
+      }
+
+      &-pulse {
+        stroke: var(--primary-purple-color);
+        stroke-width: 2px;
+        stroke-opacity: 0;
+        fill: transparent;
+        fill-opacity: 0;
+        transform-origin: 50% 50%;
+        transform-box: fill-box;
+        animation-duration: 2s;
+        animation-name: pulse;
+        animation-iteration-count: infinite;
       }
     }
 
@@ -73,6 +111,31 @@
       fill: var(--primary-purple-color);
     }
   }
+}
+
+.big-pulse {
+  animation-duration: 2s;
+  animation-name: big-pulse;
+  animation-iteration-count: infinite;
+  animation-delay: 400ms;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  opacity: 1;
+}
+
+.pulse-1 {
+  animation-delay: 1000ms;
+  opacity: 1;
+}
+
+.pulse-2 {
+  animation-delay: 2000ms;
+  opacity: 1;
+}
+
+.pulse-3 {
+  animation-delay: 3000ms;
+  opacity: 1;
 }
 
 .animate-dash {
@@ -85,16 +148,31 @@
   }
 }
 
-@keyframes sonar {
+@keyframes pulse {
+  from {
+    stroke-width: 3px;
+    stroke-opacity: 1;
+    transform: scale(0.3);
+  }
+  to {
+    stroke-width: 0;
+    stroke-opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@keyframes big-pulse {
   0% {
-    transform: scale(0.1);
-    opacity: 0.5;
+    transform: scale3d(1, 1, 1);
   }
+
   50% {
-    opacity: 0.2;
+    transform: scale3d(1.1, 1.1, 1.1);
+    opacity: 0.1;
   }
+
   100% {
-    transform: scale(1.5);
-    opacity: 0;
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
   }
 }

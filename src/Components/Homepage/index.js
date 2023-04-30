@@ -25,7 +25,7 @@ export const Homepage = () => {
           <h1>de site web</h1>
         </div>
         <div className='homepage-container-visual-image'>
-          <Image src='/images/mock-multi-wake.png' alt='logo' width={800} height={600} priority />
+          <Image src='/images/mockup_homepage.png' alt='logo' width={800} height={600} priority />
         </div>
       </div>
       <div className='homepage-container-presentation'>
