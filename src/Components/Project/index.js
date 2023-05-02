@@ -18,7 +18,7 @@ export const ProjectPage = () => {
             <article className='project-container-main-content-card-presentation'>
               <h2 className='project-container-main-content-card-presentation-title'>WAKE UP</h2>
               <span className='project-container-main-content-card-presentation-separate'></span>
-              <p>Livraison de plateau brunch</p>
+              <p>Livraison de plateaux brunch</p>
               <p>Sur Clermont-Ferrand et ses alentours</p>
             </article>
             <Image src='/images/wakeup.webp' alt='wakeup' width={1000} height={600} />

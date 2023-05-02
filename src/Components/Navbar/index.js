@@ -2,6 +2,7 @@
 import './navbar.scss';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { IconContact, IconHome, IconProject, IconMarketing, IconService, Logo } from '../SvgComponent';
 import { useState, useEffect } from 'react';
@@ -53,7 +54,9 @@ export const Navbar = () => {
 
   return (
     <nav className='navbar'>
-      <a href='#home' ><Logo /></a>
+      <a href='#home' >
+        <Image src='/images/logo.png' alt='logo virtualGS' width={34} height={40} />
+      </a>
       <ul className='icon-section'>
         {
           layout.map((nav, i) => {

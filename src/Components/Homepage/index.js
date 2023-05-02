@@ -1,8 +1,9 @@
 import './homepage.scss';
 
-import { SvgBackground, BrandName, Logo, Hexagone } from '../SvgComponent';
+import { SvgBackground, Hexagone } from '../SvgComponent';
 
 import Image from 'next/image';
+import { HomepageBrand, HomepageLogo } from '../SvgComponent/homepageSvg';
 
 
 export const Homepage = () => {
@@ -11,11 +12,11 @@ export const Homepage = () => {
     <section className='homepage-container'>
       <div className='homepage-container-header'>
         <div className='homepage-container-header-logo-svg' >
-          <Logo />
+          <HomepageLogo />
         </div>
         <div className='homepage-container-header-logo'>
           <div className='homepage-container-header-logo-name' >
-            <BrandName />
+            <HomepageBrand />
           </div>
         </div>
       </div>

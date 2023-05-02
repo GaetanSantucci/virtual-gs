@@ -13,6 +13,11 @@
   bottom: 0;
   background-color: #ffffff;
   filter: drop-shadow(-2px 0 5px #ececec);
+
+  & img {
+    margin-top: 1rem;
+    filter: drop-shadow(0 3px 4px var(--primary-grey-color));
+  }
 }
 .container-icon {
   width: 100%;
@@ -21,7 +26,6 @@
   align-items: center;
   margin-bottom: 1rem;
   user-select: none;
-
   & a {
     width: 100%;
     display: flex;
@@ -44,11 +48,11 @@
 
 .icon {
   width: 25px;
-  filter: drop-shadow(1px 2px 3px var(--primary-purple-color));
+  filter: drop-shadow(1px 2px 3px var(--primary-grey-color));
   transition: all 400ms;
 
   &:hover {
-    filter: drop-shadow(1px 2px 3px var(--primary-grey-color));
+    filter: drop-shadow(0 2px 3px var(--primary-fluo-color));
     transition: all 200ms;
   }
 
@@ -82,7 +86,7 @@ li.active {
   & svg {
     transition: all 400ms;
     .svg-ext {
-      fill: var(--icon-colored-fill);
+      fill: var(--primary-dark-color);
     }
 
     .svg-ins {
@@ -92,7 +96,7 @@ li.active {
   }
   & a {
     opacity: 0.8;
-    background-color: #caf200;
+    background-color: var(--primary-fluo-color);
     transition: all 400ms;
   }
   & p {

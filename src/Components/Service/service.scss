@@ -8,7 +8,7 @@
 
   &-title {
     position: absolute;
-    top: 50px;
+    top: 70px;
     & svg {
       width: 120%;
     }
@@ -55,6 +55,7 @@
       &-left {
         position: absolute;
         width: 25%;
+        max-width: 400px;
         left: -100px;
         top: -100px;
         transform: rotate(90deg);
@@ -124,7 +125,7 @@
 }
 
 .pulse-1 {
-  animation-delay: 1000ms;
+  animation-delay: 700ms;
   opacity: 1;
 }
 

@@ -2,39 +2,37 @@
 
 .homepage-container {
   position: relative;
-  @include mixins.section($justify: flex-start);
+  @include mixins.section($justify: space-evenly);
   row-gap: 2rem;
 
   &-header {
     width: 100%;
-    height: 20vh;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-left: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
     &-logo {
       display: flex;
       align-items: center;
       justify-content: flex-start;
 
       &-name {
-        width: 350px;
+        width: 300px;
         z-index: 1;
       }
       &-svg {
-        position: absolute;
+        // position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 350px;
         height: auto;
         & svg {
-          width: 50%;
-          filter: none;
-          margin-top: 0;
-          & path {
-            fill: var(--primary-light-color) !important;
+          width: 40%;
+          filter: drop-shadow(0 12px 4px var(--primary-dark-color)) & path {
+
           }
         }
       }
@@ -42,11 +40,10 @@
   }
 
   &-visual {
-    // width: 60%;
-    height: 350px;
+    width: 70%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     column-gap: 4rem;
     margin-top: 2rem;
     margin-left: 25px;
@@ -55,9 +52,8 @@
       flex-direction: column;
       flex-wrap: nowrap;
       align-items: flex-start;
-      margin-top: 8rem;
       font-family: var(--font-title);
-      font-size: 1.6rem;
+      font-size: 1.4rem;
 
       & h1 {
         display: inline-block;
@@ -73,14 +69,14 @@
     }
     &-image {
       & img {
-        width: 600px;
+        width: 450px;
         height: auto;
       }
     }
   }
 
   &-presentation {
-    margin-top: 5rem;
+    width: 70%;
     position: relative;
     display: flex;
     align-items: center;
@@ -90,16 +86,15 @@
       & p {
         font-family: 'Poppins regular';
         color: var(--primary-dark-color);
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         text-align: start;
         letter-spacing: 2px;
       }
     }
 
     &-svg {
-      margin-top: 2rem;
       margin-left: 1rem;
-      width: 28%;
+      width: 25%;
       position: absolute;
       z-index: -1;
       & svg {
@@ -207,6 +202,13 @@
   //   fill: none;
   //   stroke: var(--primary-purple-color);
   // }
+}
+
+.homepage-logo {
+  &-fox {
+    fill: var(--primary-dark-color);
+    filter: drop-shadow(0 12px 4px var(--primary-dark-color));
+  }
 }
 
 // @keyframes dash-line {

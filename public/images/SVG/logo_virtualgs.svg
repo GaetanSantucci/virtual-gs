@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 218 252.26">
+  <defs>
+    <clipPath id="clippath">
+      <rect class="cls-2" width="218" height="252.26"/>
+    </clipPath>
+    <linearGradient id="Dégradé_sans_nom_911" data-name="Dégradé sans nom 911" x1="109" y1="245.86" x2="109" y2="-68.1" gradientUnits="userSpaceOnUse">
+      <stop offset=".2" stop-color="#3d2c86"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="Calque_1-2" data-name="Calque 1">
+    <g class="cls-1">
+      <g>
+        <polygon class="cls-4" points="15.92 15.78 15.92 149.49 109 241.94 202.08 149.49 202.08 15.78 109 108.24 15.92 15.78"/>
+        <path class="cls-3" d="m207.58,2.57l-40.56,40.29L109,9.36l-58.02,33.5L10.42,2.57v149.21h0v28.32l68.07,39.3,30.5,30.3,30.5-30.3,68.07-39.3v-28.31h0V2.57Zm-11,26.42v30.93l-19.69-11.37,19.69-19.56Zm-87.58,195.16l-24.12-13.92-63.33-62.91v-74.64l27.74-16.01,59.71,59.31,59.71-59.31,27.74,16.01v74.64l-63.33,62.91-24.12,13.92Zm0-201.95l49.84,28.78-49.84,49.5-49.84-49.5,49.84-28.78Zm-67.89,26.35l-19.69,11.37v-30.93l19.69,19.56Zm-19.56,125.12v-10.84l26.06,25.88-26.06-15.04Zm174.9,0l-26.06,15.04,26.06-25.88v10.84Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
