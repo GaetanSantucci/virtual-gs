@@ -72,6 +72,7 @@
 
           &-title {
             color: var(--prmary-dark-color);
+            font-family: 'Poppins regular';
           }
           & p {
             font-family: var(--font-paragraph);
@@ -140,5 +141,36 @@
   }
   100% {
     width: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-container {
+    height: 100%;
+    margin-top: 3rem;
+
+    &-main {
+      width: 100%;
+      height: auto;
+      row-gap: 0;
+
+      &-presentation {
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 1rem 0;
+      }
+
+      & h2 {
+        color: var(--primary-fluo-color);
+        font-size: 2rem;
+      }
+
+      &-content {
+        padding: 2rem 0;
+        width: 100%;
+        background-color: rgba(73, 183, 146, 0.6901960784);
+      }
+    }
   }
 }

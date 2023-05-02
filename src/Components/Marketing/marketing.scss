@@ -253,6 +253,11 @@
           width: 80%;
           margin: 1rem;
 
+          &-content {
+            height: auto;
+            padding-bottom: 2rem;
+          }
+
           &-title {
             color: var(--primary-light-color);
           }

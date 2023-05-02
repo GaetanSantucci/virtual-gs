@@ -98,7 +98,7 @@ export const ContactPage = () => {
         {/* <input type="tel" placeholder='Téléphone' className='input-text' value={phone} onChange={(e) => setPhone(e.target.value)} required /> */}
         {/* </div> */}
         <div className="contact-form-message">
-          <textarea name='message' rows="6" cols="60" placeholder='Entrez votre message' className='input-text' value={message} onChange={(e) => setMessage(e.target.value)} required />
+          <textarea name='message' rows="4" cols="60" placeholder='Entrez votre message' className='input-text' value={message} onChange={(e) => setMessage(e.target.value)} required />
         </div>
         <button type="submit" className="contact-btn" onClick={handleSubmit}><SubmitBtn /></button>
         <div id='plane' className='send-mail'><SendMail /></div>

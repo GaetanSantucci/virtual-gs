@@ -150,7 +150,7 @@
 
 @keyframes changeFillColor {
   0% {
-    fill: var(--primary-purple-color);
+    fill: var(--primary-fluo-color);
   }
 }
 
@@ -162,16 +162,7 @@
   align-items: center;
   justify-content: space-evenly;
   gap: 10px 10px;
-  // height: 325px;
-  // display: grid;
-  // grid-auto-columns: 1fr;
-  // grid-template-columns: 1fr 1fr;
-  // grid-template-rows: 1fr 1fr 1fr;
-  // gap: 16px 16px;
-  // grid-template-areas:
-  //   'lastname firstname'
-  //   'email phone'
-  //   'message message';
+
   &-name,
   &-method {
     width: 100%;
@@ -206,16 +197,12 @@
 textarea {
   padding-top: 1.2rem !important;
   height: 200px !important;
-  &::placeholder {
-    padding-top: 1rem;
-  }
 }
 
 .input-text::placeholder {
   font-family: var(--font-title);
-  color: #555555;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--primary-dark-color);
+  color: #35866b;
+  border-bottom: 1px solid #35866b;
 }
 
 .input-text:focus {

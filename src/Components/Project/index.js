@@ -16,7 +16,7 @@ export const ProjectPage = () => {
         <div className='project-container-main-content'>
           <Link href='https://wakeupclf.fr' className='project-container-main-content-card'>
             <article className='project-container-main-content-card-presentation'>
-              <h2 className='project-container-main-content-card-presentation-title'>WAKE UP</h2>
+              <h3 className='project-container-main-content-card-presentation-title'>WAKE UP</h3>
               <span className='project-container-main-content-card-presentation-separate'></span>
               <p>Livraison de plateaux brunch</p>
               <p>Sur Clermont-Ferrand et ses alentours</p>
@@ -25,7 +25,7 @@ export const ProjectPage = () => {
           </Link>
           <Link href='https://rpdata.fr' className='project-container-main-content-card'>
             <article className='project-container-main-content-card-presentation'>
-              <h2 className='project-container-main-content-card-presentation-title'>RP DATA</h2>
+              <h3 className='project-container-main-content-card-presentation-title'>RP DATA</h3>
               <span className='project-container-main-content-card-presentation-separate'></span>
               <p>Site d&apos;analyse data client</p>
               <p>Accompagnement, formation</p>
@@ -34,7 +34,7 @@ export const ProjectPage = () => {
           </Link>
           <Link href='https://e-co-roads.netlify.app/' className='project-container-main-content-card'>
             <article className='project-container-main-content-card-presentation'>
-              <h2 className='project-container-main-content-card-presentation-title'>ECO-ROADS</h2>
+              <h3 className='project-container-main-content-card-presentation-title'>ECO-ROADS</h3>
               <span className='project-container-main-content-card-presentation-separate'></span>
               <p>Trajet en voiture electrique</p>
               <p>basé sur vos points d&apos;intêrets</p>
@@ -43,7 +43,7 @@ export const ProjectPage = () => {
           </Link>
           <a href='#contact' className='project-container-main-content-card'>
             <article className='project-container-main-content-card-presentation'>
-              <h2 className='project-container-main-content-card-presentation-title'>Nouveau projet</h2>
+              <h3 className='project-container-main-content-card-presentation-title'>Nouveau projet</h3>
               <span className='project-container-main-content-card-presentation-separate'></span>
               <p>VIRTUAL GS</p>
               <p>X</p>

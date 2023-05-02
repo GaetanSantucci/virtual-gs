@@ -1,7 +1,7 @@
 "use client";
 
 import { ContactPage, Homepage, Navbar, ProjectPage, MarketingPage, ServicePage, Footer } from '@/Components';
-import {  useEffect, useState } from 'react';
+import {  useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollToPlugin, ScrollTrigger } from 'gsap/all';
 
@@ -10,7 +10,6 @@ import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detec
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function Home() {
-  console.log('isMobile:', isMobile);
   
       useEffect(() =>{
         console.log("je suis avant le if");
@@ -71,12 +70,12 @@ export default function Home() {
          <div id='marketing' className='panel'>
             <MarketingPage />
           </div>
-            {/* <div id='service' className='panel'>
+          <div id='service' className='panel'>
             <ServicePage />
-            </div>
+          </div>
             <div id='project' className='panel'>
             <ProjectPage />
-            </div> */}
+            </div>
           <div id='contact' className='panel'>
             <ContactPage />
           </div>
