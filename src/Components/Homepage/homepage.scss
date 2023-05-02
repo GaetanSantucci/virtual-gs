@@ -20,20 +20,17 @@
       justify-content: flex-start;
 
       &-name {
-        width: 300px;
+        width: 340px;
         z-index: 1;
+
+        & svg {
+          filter: drop-shadow(0 6px 4px var(--primary-dark-color));
+        }
       }
       &-svg {
-        // position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: auto;
+        text-align: center;
         & svg {
-          width: 40%;
-          filter: drop-shadow(0 12px 4px var(--primary-dark-color)) & path {
-
-          }
+          width: 45%;
         }
       }
     }
@@ -80,7 +77,6 @@
     position: relative;
     display: flex;
     align-items: center;
-    // margin-top: 7rem;
 
     &-catchphrase {
       & p {
@@ -103,7 +99,6 @@
           fill: none;
           stroke-width: 2px;
           stroke: var(--primary-light-color);
-          // filter: drop-shadow(2px 4px 6px var(--primary-dark-color));
         }
       }
     }
@@ -179,9 +174,7 @@
     & path {
       &:nth-child(1) {
         fill: var(--primary-grey-color);
-        stroke: var(--primary-purple-color);
-        stroke-opacity: 0.6;
-        opacity: 0.4;
+        opacity: 0.5;
       }
       &:nth-child(2) {
         filter: drop-shadow(2px 4px 6px var(--primary-grey-color));
@@ -198,16 +191,22 @@
       }
     }
   }
-  // & svg:nth-child(2) {
-  //   fill: none;
-  //   stroke: var(--primary-purple-color);
-  // }
 }
 
 .homepage-logo {
   &-fox {
     fill: var(--primary-dark-color);
     filter: drop-shadow(0 12px 4px var(--primary-dark-color));
+  }
+}
+
+.logo-letter {
+  &-light {
+    fill: var(--primary-light-color);
+  }
+
+  &-colored {
+    fill: var(--primary-dark-color);
   }
 }
 
@@ -222,3 +221,15 @@
 //     stroke-dashoffset: 0;
 //   }
 // }
+
+.big-hexa {
+  fill: var(--primary-fluo-color);
+  animation: move 4s linear infinite alternate;
+}
+
+@keyframes move {
+  to {
+    left: 100%;
+    fill: #348369;
+  }
+}

@@ -1,9 +1,9 @@
 import './homepage.scss';
 
-import { SvgBackground, Hexagone } from '../SvgComponent';
+import { Hexagone } from '../SvgComponent';
 
 import Image from 'next/image';
-import { HomepageBrand, HomepageLogo } from '../SvgComponent/homepageSvg';
+import { HomepageBackground, HomepageBrand, HomepageLogo } from '../SvgComponent/homepageSvg';
 
 
 export const Homepage = () => {
@@ -39,7 +39,7 @@ export const Homepage = () => {
         </div>
       </div>
       <div className='background-shadow'>
-        <SvgBackground />
+        <HomepageBackground />
       </div>
     </section>
   )
