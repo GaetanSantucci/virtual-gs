@@ -4,8 +4,10 @@ import './navbar.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { IconContact, IconHome, IconProject, IconMarketing, IconService, Logo } from '../SvgComponent';
+import { IconContact, IconHome, IconProject, IconMarketing, IconService } from '../SvgComponent';
 import { useState, useEffect } from 'react';
+
+
 
 const layout = [
   {
@@ -28,9 +30,10 @@ const layout = [
 ]
 
 export const Navbar = () => {
-  const [activeSection, setActiveSection] = useState('home');
 
+  const [activeSection, setActiveSection] = useState('');
   useEffect(() => {
+
     function handleScroll() {
       const panels = document.querySelectorAll('.panel');
       const scrollPosition = window.innerHeight / 2;
@@ -49,13 +52,15 @@ export const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+
   }, []);
 
 
   return (
+
     <nav className='navbar'>
-      <a href='#home' >
-        <Image src='/images/logo.png' alt='logo virtualGS' width={34} height={40} />
+      <a href='#home' className='navbar-logo'>
+        <Image src='/images/logo.png' alt='logo virtualGS' width={34} height={40} priority />
       </a>
       <ul className='icon-section'>
         {
@@ -77,4 +82,7 @@ export const Navbar = () => {
     </nav >
   )
 }
+
+
+
 

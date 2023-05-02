@@ -74,31 +74,36 @@ export const ContactPage = () => {
       <div className='contact-background-shadow'>
         <ContactBackgroundSVG />
       </div>
-      <h2 className='title'>Contact</h2>
+      <h3 className='title'>Contact</h3>
       <form className="contact-form">
-        <div className="lastname">
+        <div className='contact-form-name'>
+          <input type="text" placeholder='Nom' className='input-text' value={lastname} onChange={(e) => setLastname(e.target.value)} required />
+          <input type="text" placeholder='Prénom' className='input-text' value={firstname} onChange={(e) => setFirstname(e.target.value)} required />
+
+        </div>
+        {/* <div className="lastname">
           <input type="text" placeholder='Nom' className='input-text' value={lastname} onChange={(e) => setLastname(e.target.value)} required />
         </div>
         <div className="firstname">
           <input type="text" placeholder='Prénom' className='input-text' value={firstname} onChange={(e) => setFirstname(e.target.value)} required />
-        </div>
-        <div className="email">
+        </div> */}
+        <div className='contact-form-method' >
           <input type="email" placeholder='Email' className='input-text' value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </div>
-        <div className="phone">
           <input type="tel" placeholder='Téléphone' className='input-text' value={phone} onChange={(e) => setPhone(e.target.value)} required />
         </div>
-        <div className="message">
+        {/* <div className="email">
+          <input type="email" placeholder='Email' className='input-text' value={email} onChange={(e) => setEmail(e.target.value)} required />
+        </div> */}
+        {/* <div className="phone"> */}
+        {/* <input type="tel" placeholder='Téléphone' className='input-text' value={phone} onChange={(e) => setPhone(e.target.value)} required /> */}
+        {/* </div> */}
+        <div className="contact-form-message">
           <textarea name='message' rows="6" cols="60" placeholder='Entrez votre message' className='input-text' value={message} onChange={(e) => setMessage(e.target.value)} required />
         </div>
         <button type="submit" className="contact-btn" onClick={handleSubmit}><SubmitBtn /></button>
         <div id='plane' className='send-mail'><SendMail /></div>
       </form>
       <div className="contact-background" />
-      <footer className='footer'>
-        <p>&copy; COPYRIGHT 2023 VIRTUAL GS - Tous droits réservés </p><Link href='#'>Conditions générales</Link>
-      </footer>
-      <div className="contact-brand-name"><BrandName /></div>
     </section>
   )
 }

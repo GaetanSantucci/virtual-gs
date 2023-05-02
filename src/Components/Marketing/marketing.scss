@@ -62,6 +62,7 @@
       &-subtitle {
         font-size: 1.8rem;
         margin-top: 2rem;
+        color: #348369;
       }
       & p {
         font-family: var(--font-paragraph);
@@ -209,5 +210,73 @@
   to {
     left: 100%;
     fill: #348369;
+  }
+}
+
+@media (max-width: 640px) {
+  .marketing-container {
+    height: 100%;
+
+    &-main {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      &-presentation {
+        width: 90%;
+        margin-top: 2rem;
+        padding-top: 0;
+
+        &-title {
+          font-size: 2rem;
+          color: var(--primary-fluo-color);
+        }
+        &-subtitle {
+          margin-top: 0;
+          font-size: 1.4rem;
+        }
+
+        &-text {
+          color: var(--primary-dark-color) !important;
+          font-size: 0.9rem !important;
+        }
+      }
+
+      &-benefit {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #49b792b0;
+        margin: 3rem 0;
+
+        &-card {
+          width: 80%;
+          margin: 1rem;
+
+          &-title {
+            color: var(--primary-light-color);
+          }
+
+          & h3 {
+            color: var(--primary-light-color);
+          }
+
+          &:hover {
+            & h3 {
+              // color: var(--primary-light-color);
+              // filter: drop-shadow(0 4px 2px var(--primary-dark-color));
+              transition: all 400ms;
+            }
+          }
+        }
+      }
+    }
+    &-background {
+      display: none;
+
+      &-dot {
+        left: 0;
+      }
+    }
   }
 }

@@ -61,7 +61,6 @@
         line-height: 1.2;
         color: var(--primary-fluo-color);
         background-color: var(--primary-dark-color);
-        vertical-align: baseline;
       }
     }
     &-image {
@@ -231,5 +230,69 @@
   to {
     left: 100%;
     fill: #348369;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 100%;
+  }
+
+  .homepage-container {
+    height: 100%;
+
+    &-header {
+      margin-left: 0;
+      row-gap: 0;
+      margin: 1.5rem;
+
+      &-logo-svg {
+        & svg {
+          width: 25%;
+        }
+      }
+
+      &-logo-name {
+        width: 200px;
+      }
+    }
+
+    &-presentation {
+      width: 90%;
+
+      & p {
+        font-size: 0.9rem;
+      }
+
+      &-svg {
+        display: none;
+      }
+    }
+
+    &-visual {
+      flex-direction: column;
+      margin-top: 0;
+      margin-left: 0;
+
+      &-title {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      &-image {
+        width: 375px;
+        height: 220px;
+        position: relative;
+
+        & img {
+          position: absolute;
+          width: 375px;
+        }
+      }
+    }
+  }
+
+  .background-shadow {
+    top: 0;
   }
 }

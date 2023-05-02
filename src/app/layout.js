@@ -1,5 +1,4 @@
-import { Navbar } from '@/Components'
-import '/public/styles/globals.scss'
+import '/public/styles/globals.scss';
 
 export const metadata = {
   title: 'Virtual GS - Création de site web',
@@ -33,6 +32,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
 
   return (
     <html lang="en">

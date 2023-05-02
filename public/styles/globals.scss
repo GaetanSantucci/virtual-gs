@@ -115,9 +115,6 @@
   padding: 0;
   margin: 0;
 }
-// html {
-//   overflow-y: scroll;
-// }
 
 body {
   height: 100%;
@@ -175,6 +172,19 @@ textarea {
 
   &-colored {
     fill: var(--icon-colored-fill);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    overflow: scroll;
+  }
+
+  .container {
+    margin-top: 10vh;
+  }
+  .panel {
+    height: auto;
   }
 }
 
