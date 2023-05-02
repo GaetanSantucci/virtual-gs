@@ -1,14 +1,13 @@
 @use '/public/styles/mixins';
 
 .service-container {
-  @include mixins.section();
+  @include mixins.section($justify: center);
   margin-left: 0;
   position: relative;
   overflow: hidden;
 
   &-title {
-    position: absolute;
-    top: 70px;
+    // margin-top: 3rem;
     & svg {
       width: 120%;
     }
@@ -19,29 +18,28 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
-    position: relative;
 
     & svg {
       width: 100%;
     }
 
     &-picture {
-      width: 80%;
-      position: absolute;
-      bottom: 20px;
-      margin-left: 90px;
+      width: 90%;
       display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-
+      justify-content: flex-end;
       & img {
-        width: 30%;
+        width: 20%;
         height: auto;
-      }
+        position: absolute;
+        bottom: 20px;
+        right: 8%;
+        filter: drop-shadow(0 12px 6px var(--primary-grey-color));
+        transition: all 400ms;
 
-      & svg {
-        width: 18%;
+        &:hover {
+          transform: translateY(-10px) scale(1.2);
+          transition: all 400ms;
+        }
       }
     }
   }
@@ -54,12 +52,13 @@
 
       &-left {
         position: absolute;
-        width: 25%;
+        width: 21%;
         max-width: 400px;
         left: -100px;
         top: -100px;
         transform: rotate(90deg);
         fill: var(--primary-fluo-color);
+        fill-opacity: 0.6;
       }
     }
     &-paragraph {
@@ -68,7 +67,7 @@
 
     &-layout {
       fill: none;
-      stroke: var(--primary-purple-color);
+      stroke: var(--primary-fluo-color);
       stroke-width: 2px;
       stroke-dasharray: 1455;
       stroke-dashoffset: 1455;
@@ -77,24 +76,19 @@
 
     &-circle {
       fill: none;
-      stroke: var(--primary-purple-color);
+      stroke: var(--primary-fluo-color);
       stroke-width: 1px;
       transform-box: fill-box;
 
-      // &:hover {
-      //   stroke-dasharray: 600;
-      //   stroke-dashoffset: 600;
-      // }
-
       &-center {
-        fill: var(--primary-purple-color);
-        stroke: var(--primary-purple-color);
+        fill: var(--primary-fluo-color);
+        stroke: var(--primary-fluo-color);
         stroke-width: 2px;
         stroke-opacity: 1;
       }
 
       &-pulse {
-        stroke: var(--primary-purple-color);
+        stroke: var(--primary-fluo-color);
         stroke-width: 2px;
         stroke-opacity: 0;
         fill: transparent;
@@ -107,10 +101,37 @@
       }
     }
 
-    &-dot-circle {
-      fill-opacity: 0.2;
-      fill: var(--primary-purple-color);
+    &-dot {
+      width: 13%;
+      position: absolute;
+      bottom: 0;
+      left: 200px;
+      &-circle {
+        fill-opacity: 0.2;
+        fill: var(--primary-dark-color);
+      }
     }
+  }
+}
+
+.para {
+  opacity: 0;
+  transition: animation 200ms;
+  animation: appears 1000ms linear forwards;
+}
+.one {
+  animation-delay: 800ms;
+}
+.two {
+  animation-delay: 2100ms;
+}
+.three {
+  animation-delay: 3100ms;
+}
+
+@keyframes appears {
+  to {
+    opacity: 1;
   }
 }
 

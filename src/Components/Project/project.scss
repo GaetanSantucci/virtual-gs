@@ -4,27 +4,25 @@
   // background-color: rgb(160, 255, 137);
   @include mixins.section();
   position: relative;
-
   overflow: hidden;
+
   &-background {
     position: absolute;
-    height: 100%;
     right: 0;
     left: 0;
     z-index: -1;
     & svg {
-      height: 100%;
       & path {
         &:nth-child(1) {
           fill-opacity: 0.4;
-          fill: var(--primary-purple-color);
+          fill: var(--primary-fluo-color);
         }
         &:nth-child(2) {
-          fill: var(--primary-purple-color);
+          fill: var(--primary-fluo-color);
           fill-opacity: 0.7;
         }
         &:nth-child(3) {
-          fill: var(--primary-purple-color);
+          fill: var(--primary-fluo-color);
           fill-opacity: 0.5;
         }
       }
@@ -52,11 +50,12 @@
       &-card {
         position: relative;
         overflow: hidden;
-        width: 500px;
-        height: 300px;
+        width: 330px;
+        height: 210px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        border-radius: 5px;
         justify-content: center;
         background-color: #f2f2f2;
         cursor: pointer;
@@ -69,6 +68,7 @@
           justify-content: center;
           transition: all 1000ms;
           color: #555555;
+          text-align: center;
 
           &-title {
             color: var(--prmary-dark-color);
@@ -78,7 +78,7 @@
           }
 
           &-separate {
-            border-top: 1px solid #6651ff;
+            border-top: 1px solid var(--primary-fluo-color);
             width: 150px;
             height: 1px;
             display: block;
@@ -119,7 +119,7 @@
   opacity: 0;
   & h2,
   p {
-    color: var(--primary-purple-color);
+    color: var(--primary-fluo-color);
   }
   & p {
     font-family: var(--font-paragraph);

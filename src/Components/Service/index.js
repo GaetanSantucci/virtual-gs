@@ -16,11 +16,11 @@ export const ServicePage = () => {
       </div>
       <div className="service-container-main">
         <ServiceLayout />
-        <div className="service-container-main-picture">
-          <ServiceDot />
-          <Image src='/images/gaetan_santucci.png' width={400} height={400} priority alt='Photo de Gaetan Santucci' />
-        </div>
       </div>
+      <div className="service-container-main-picture">
+        <Image src='/images/gaetan_santucci_green.png' width={400} height={400} priority alt='Photo de Gaetan Santucci' />
+      </div>
+      <ServiceDot />
 
     </section>
   )
