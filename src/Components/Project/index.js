@@ -11,7 +11,7 @@ export const ProjectPage = () => {
     <section className="project-container">
       <div className="project-container-main">
         <div className='project-container-main-presentation'>
-          <h2 >PROJETS</h2>
+          <h2 >Projets</h2>
         </div>
         <div className='project-container-main-content'>
           <Link href='https://wakeupclf.fr' className='project-container-main-content-card'>

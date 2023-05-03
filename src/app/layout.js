@@ -9,8 +9,8 @@ export const metadata = {
     maximumScale: 1,
   },
   icons: {
-    icon: '/favicon.ico',
-    rel: 'icon',
+    icon: '/favicon.svg',
+    rel: 'icon'
   },
   // themeColor: [
   //   { media: '(prefers-color-scheme: light)', color: 'cyan' },

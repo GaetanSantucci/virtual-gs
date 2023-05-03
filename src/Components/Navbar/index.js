@@ -11,17 +11,17 @@ import { useState, useEffect } from 'react';
 
 const layout = [
   {
-    slug: 'home',
+    slug: 'accueil',
     icon: <IconHome />,
     active: true
   }, {
     slug: 'marketing',
     icon: <IconMarketing />,
   }, {
-    slug: 'service',
+    slug: 'services',
     icon: <IconService />,
   }, {
-    slug: 'project',
+    slug: 'projets',
     icon: <IconProject />,
   }, {
     slug: 'contact',
@@ -59,7 +59,7 @@ export const Navbar = () => {
   return (
 
     <nav className='navbar'>
-      <a href='#home' className='navbar-logo'>
+      <a href='#accueil' className='navbar-logo'>
         <Image src='/images/logo.png' alt='logo virtualGS' width={34} height={40} priority />
       </a>
       <ul className='icon-section'>

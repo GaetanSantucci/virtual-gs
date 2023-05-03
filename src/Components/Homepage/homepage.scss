@@ -22,6 +22,7 @@
       &-name {
         width: 340px;
         z-index: 1;
+        margin-top: 1rem;
 
         & svg {
           filter: drop-shadow(0 6px 4px var(--primary-dark-color));
@@ -31,6 +32,11 @@
         text-align: center;
         & svg {
           width: 45%;
+          & path {
+            &:nth-child(1) {
+              fill: white;
+            }
+          }
         }
       }
     }
@@ -192,13 +198,6 @@
   }
 }
 
-.homepage-logo {
-  &-fox {
-    fill: var(--primary-dark-color);
-    filter: drop-shadow(0 12px 4px var(--primary-dark-color));
-  }
-}
-
 .logo-letter {
   &-light {
     fill: var(--primary-light-color);
@@ -208,18 +207,6 @@
     fill: var(--primary-dark-color);
   }
 }
-
-// @keyframes dash-line {
-//   0% {
-//     stroke-dashoffset: 0;
-//   }
-//   50% {
-//     stroke-dashoffset: 100%;
-//   }
-//   100% {
-//     stroke-dashoffset: 0;
-//   }
-// }
 
 .big-hexa {
   fill: var(--primary-fluo-color);
@@ -253,12 +240,23 @@
       }
 
       &-logo-name {
+        margin-top: 1rem;
         width: 200px;
       }
     }
 
     &-presentation {
       width: 90%;
+
+      &-catchphrase {
+        & p {
+          color: var(--primary-dark-color);
+          font-family: var(--font-paragraph);
+          font-size: 1.4rem;
+          text-align: start;
+          letter-spacing: 0;
+        }
+      }
 
       & p {
         font-size: 0.9rem;

@@ -64,23 +64,23 @@ export default function Home() {
   <>
   <Navbar /> 
       <main id="panels" className='container' >
-        <div id='home'  className='panel'>
+        <div id='accueil'  className='panel'>
           <Homepage />
         </div>
          <div id='marketing' className='panel'>
             <MarketingPage />
           </div>
-          <div id='service' className='panel'>
+          <div id='services' className='panel'>
             <ServicePage />
           </div>
-            <div id='project' className='panel'>
+            <div id='projets' className='panel'>
             <ProjectPage />
             </div>
           <div id='contact' className='panel'>
             <ContactPage />
           </div>
           </main>
-            <Footer />
+            {/* <Footer /> */}
   </>
    )
 

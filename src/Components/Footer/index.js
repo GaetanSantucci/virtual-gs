@@ -1,10 +1,8 @@
 import './footer.scss';
 
 import Link from 'next/link';
-import Image from 'next/image';
-import { BrandName } from '../SvgComponent';
-import { HomepageBrand } from '../SvgComponent/homepageSvg';
 
+import { HomepageBrand } from '../SvgComponent/homepageSvg';
 
 
 export const Footer = () => {

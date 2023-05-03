@@ -3,12 +3,11 @@ import './contact.scss';
 
 import axios from 'axios';
 
-import Link from 'next/link';
-
 import { useEffect, useState } from 'react';
 
 // Svg import 
-import { ContactBackgroundSVG, BrandName, SubmitBtn, SendMail } from '../SvgComponent';
+import { ContactBackgroundSVG, SubmitBtn, SendMail } from '../SvgComponent';
+import { Footer } from '../Footer';
 
 export const ContactPage = () => {
 
@@ -42,9 +41,8 @@ export const ContactPage = () => {
       phone,
       message
     };
-    console.log('formData: ', formData);
 
-    axios.post('http://localhost:8888/api/v1/contact', formData)
+    axios.post('https://www.virtualgs.fr/api/v1/contact', formData)
       .then(response => {
         console.log(response.data);
         emailBtn.style.opacity = "0";
@@ -61,8 +59,6 @@ export const ContactPage = () => {
       .catch(error => {
         console.log(error);
       });
-
-    console.log('submit le form')
   }
 
   useEffect(() => {
@@ -79,24 +75,11 @@ export const ContactPage = () => {
         <div className='contact-form-name'>
           <input type="text" placeholder='Nom' className='input-text' value={lastname} onChange={(e) => setLastname(e.target.value)} required />
           <input type="text" placeholder='Prénom' className='input-text' value={firstname} onChange={(e) => setFirstname(e.target.value)} required />
-
         </div>
-        {/* <div className="lastname">
-          <input type="text" placeholder='Nom' className='input-text' value={lastname} onChange={(e) => setLastname(e.target.value)} required />
-        </div>
-        <div className="firstname">
-          <input type="text" placeholder='Prénom' className='input-text' value={firstname} onChange={(e) => setFirstname(e.target.value)} required />
-        </div> */}
         <div className='contact-form-method' >
           <input type="email" placeholder='Email' className='input-text' value={email} onChange={(e) => setEmail(e.target.value)} required />
           <input type="tel" placeholder='Téléphone' className='input-text' value={phone} onChange={(e) => setPhone(e.target.value)} required />
         </div>
-        {/* <div className="email">
-          <input type="email" placeholder='Email' className='input-text' value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </div> */}
-        {/* <div className="phone"> */}
-        {/* <input type="tel" placeholder='Téléphone' className='input-text' value={phone} onChange={(e) => setPhone(e.target.value)} required /> */}
-        {/* </div> */}
         <div className="contact-form-message">
           <textarea name='message' rows="4" cols="60" placeholder='Entrez votre message' className='input-text' value={message} onChange={(e) => setMessage(e.target.value)} required />
         </div>
@@ -104,6 +87,7 @@ export const ContactPage = () => {
         <div id='plane' className='send-mail'><SendMail /></div>
       </form>
       <div className="contact-background" />
+      <Footer />
     </section>
   )
 }

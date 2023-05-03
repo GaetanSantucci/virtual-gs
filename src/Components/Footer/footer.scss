@@ -9,9 +9,11 @@
     width: 100%;
     display: flex;
     justify-content: center;
-
+    .logo-letter-colored {
+      fill: var(--primary-fluo-color) !important;
+    }
     & svg {
-      width: 40%;
+      width: 15%;
     }
     & path {
       // fill: none;
@@ -31,7 +33,7 @@
         fill: var(--primary-light-color);
       }
       &:nth-child(6) {
-        fill: var(--primary-fluo-color);
+        fill: var(--primary-light-color);
       }
       &:nth-child(7) {
         fill: var(--primary-light-color);
@@ -51,12 +53,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
   }
   & p,
   & a {
     font-family: var(--font-paragraph);
     color: var(--primary-light-color);
     font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-container {
+    &-brand {
+      & svg {
+        width: 40%;
+      }
+    }
   }
 }

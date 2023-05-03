@@ -7,10 +7,10 @@
     @include mixins.section($justify: space-between);
     & h3 {
       z-index: 10;
-      font-family: 'Poppins regular';
       color: var(--paragraph-color);
-      margin: 2rem 0;
-      font-size: 4rem;
+      font-size: 2.4rem;
+      font-family: var(--font-title);
+      margin: 4rem 0 2rem 0;
     }
   }
 
@@ -181,7 +181,7 @@
 }
 
 .input-text {
-  width: 50%;
+  width: 49%;
   height: 65px;
   border: none;
   outline: none;

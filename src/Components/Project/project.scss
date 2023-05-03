@@ -38,6 +38,14 @@
     justify-content: center;
     row-gap: 20px;
 
+    &-presentation {
+      & h2 {
+        font-size: 2.4rem;
+        color: var(--font-light-color);
+        font-family: var(--font-title);
+      }
+    }
+
     &-content {
       width: 100%;
       position: relative;
@@ -71,7 +79,7 @@
           text-align: center;
 
           &-title {
-            color: var(--prmary-dark-color);
+            color: var(--primary-dark-color);
             font-family: 'Poppins regular';
           }
           & p {

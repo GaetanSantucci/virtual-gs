@@ -32,7 +32,7 @@ export const Homepage = () => {
       <div className='homepage-container-presentation'>
         <div className='homepage-container-presentation-catchphrase'>
           <p>Renforcez votre présence numérique</p>
-          <p> avec nos solutions de développement web personnalisées</p>
+          <p> avec mes solutions de développement web personnalisées</p>
         </div>
         <div className='homepage-container-presentation-svg'>
           <Hexagone />
