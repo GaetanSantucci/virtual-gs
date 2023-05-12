@@ -104,6 +104,16 @@
   }
 }
 
+.error-message {
+  background-color: #ca5e5ee3;
+  border: 1px solid #af0303;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  color: var(--primary-light-color);
+  font-family: var(--font-paragraph);
+}
+
 // .letter-flight {
 //   -webkit-animation-name: bounceOutRight;
 //   animation-name: bounceOutRight;

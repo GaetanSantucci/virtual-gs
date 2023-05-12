@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 // Svg import 
-import { ContactBackgroundSVG, SubmitBtn, SendMail } from '../SvgComponent';
+import { ContactBackgroundSVG, SubmitBtn } from '../SvgComponent';
 import { Footer } from '../Footer';
 
 export const ContactPage = () => {
@@ -16,7 +16,8 @@ export const ContactPage = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  console.log();
+  const [errorMessage, setErrorMessage] = useState('');
+
   const resetData = () => {
     setLastname('');
     setFirstname('');
@@ -28,6 +29,15 @@ export const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Check if any input field is empty
+    if (!lastname || !firstname || !email || !phone || !message) {
+      setErrorMessage('Merci de remplir les champs !');
+      setTimeout(() => {
+        setErrorMessage('')
+      }, 2000)
+      return;
+    }
 
     // select button element to add animation
     const emailBtn = document.querySelector('.contact-btn');
@@ -48,7 +58,7 @@ export const ContactPage = () => {
         resetData();
         setTimeout(() => {
           emailBtn.classList.remove('slide-out-elliptic-top-bck');
-        }, 2000);
+        }, 1200);
       })
       .catch(error => {
         console.log(error);
@@ -77,6 +87,7 @@ export const ContactPage = () => {
         <div className="contact-form-message">
           <textarea name='message' rows="4" cols="60" placeholder='Entrez votre message' className='input-text' value={message} onChange={(e) => setMessage(e.target.value)} required />
         </div>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
         <button type="submit" className="contact-btn" onClick={handleSubmit}><SubmitBtn /></button>
       </form>
       <div className="contact-background" />
