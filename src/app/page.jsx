@@ -5,17 +5,15 @@ import {  useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollToPlugin, ScrollTrigger } from 'gsap/all';
 
-import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function Home() {
   
       useEffect(() =>{
-        console.log("je suis avant le if");
 
         if(!isMobile) {
-          console.log(" je passe dans le if");
           let panels = gsap.utils.toArray(".panel"),
           observer = ScrollTrigger.normalizeScroll(true),
           scrollTween;

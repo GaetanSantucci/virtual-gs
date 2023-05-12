@@ -4,8 +4,8 @@ const HomepageLogo = () => {
       <defs>
         <linearGradient id="three_opacity_stops" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" style={{ stopColor: '#47b492', stopOpacity: '1' }} />
-          <stop offset="60%" style={{ stopColor: '#2a2a2a', stopOpacity: '0.8' }} />
-          <stop offset="100%" style={{ stopColor: '#000000', stopOpacity: '0.8' }} />
+          <stop offset="60%" style={{ stopColor: '#47b492', stopOpacity: '0.8' }} />
+          <stop offset="100%" style={{ stopColor: '#47b492', stopOpacity: '0.5' }} />
         </linearGradient>
       </defs>
       <g id="Calque_1-2" data-name="Calque 1">

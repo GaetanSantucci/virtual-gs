@@ -64,7 +64,6 @@ p {
 
 h2 {
   color: white;
-  // font-size: 2rem;
   font-family: var(--font-paragraph);
 }
 
@@ -84,8 +83,6 @@ textarea {
 }
 
 .svg-letter {
-  fill: var(--for);
-
   &-colored {
     fill: var(--icon-colored-fill);
   }
@@ -97,8 +94,9 @@ textarea {
   }
 
   .container {
-    margin-top: 10vh;
+    margin-top: 8vh;
   }
+
   .panel {
     height: auto;
   }

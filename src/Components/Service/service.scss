@@ -111,6 +111,10 @@
   }
 }
 
+.layout-mobile {
+  display: none;
+}
+
 .para {
   opacity: 0;
   transition: animation 200ms;
@@ -197,6 +201,14 @@
 }
 
 @media (max-width: 640px) {
+  .layout-mobile {
+    display: block;
+  }
+
+  .layout-desktop {
+    display: none;
+  }
+
   .service-container {
     height: auto;
     margin-top: 3rem;
