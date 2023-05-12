@@ -6,7 +6,7 @@
 
   &-title {
     & svg {
-      width: 120%;
+      width: 150%;
     }
   }
 
@@ -109,6 +109,10 @@
       }
     }
   }
+}
+
+.service-hexagone-title {
+  fill: var(--primary-fluo-color);
 }
 
 .layout-mobile {
@@ -214,9 +218,10 @@
     margin-top: 3rem;
 
     .service-hexagone-left {
-      left: auto;
-      top: 100px;
-      transform: rotate(16deg);
+      width: 26%;
+      left: 83px;
+      top: 84px;
+      transform: rotate(15deg);
     }
 
     &-title {
@@ -253,6 +258,11 @@
         width: 100%;
         position: static;
       }
+    }
+
+    .service-paragraph {
+      fill: var(--primary-fluo-color);
+      fill-opacity: 0.2;
     }
   }
 }

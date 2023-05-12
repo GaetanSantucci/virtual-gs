@@ -30,9 +30,7 @@ export const ContactPage = () => {
     e.preventDefault();
 
     // select button element to add animation
-    const emailPlane = document.getElementById('plane');
     const emailBtn = document.querySelector('.contact-btn');
-    const fillColor = document.querySelector('.send-mail path');
 
     const formData = {
       lastname,
@@ -45,15 +43,11 @@ export const ContactPage = () => {
     axios.post('https://www.virtualgs.fr/api/v1/contact', formData)
       .then(response => {
         console.log(response.data);
-        emailBtn.style.opacity = "0";
-        emailPlane.classList.add('letter-flight');
-        fillColor.classList.add('color-change');
+        emailBtn.classList.add('slide-out-elliptic-top-bck');
 
         resetData();
         setTimeout(() => {
-          emailBtn.style.opacity = 1;
-          fillColor.classList.remove('color-change');
-          emailPlane.classList.remove('letter-flight');
+          emailBtn.classList.remove('slide-out-elliptic-top-bck');
         }, 2000);
       })
       .catch(error => {
@@ -84,7 +78,6 @@ export const ContactPage = () => {
           <textarea name='message' rows="4" cols="60" placeholder='Entrez votre message' className='input-text' value={message} onChange={(e) => setMessage(e.target.value)} required />
         </div>
         <button type="submit" className="contact-btn" onClick={handleSubmit}><SubmitBtn /></button>
-        <div id='plane' className='send-mail'><SendMail /></div>
       </form>
       <div className="contact-background" />
       <Footer />

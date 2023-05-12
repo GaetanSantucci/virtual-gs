@@ -251,16 +251,16 @@
       &-catchphrase {
         & p {
           color: var(--primary-dark-color);
-          font-family: var(--font-paragraph);
-          font-size: 1.4rem;
+          font-family: var(--font-title);
+          font-size: 1.2rem;
           text-align: start;
           letter-spacing: 0;
         }
       }
 
-      & p {
-        font-size: 0.9rem;
-      }
+      // & p {
+      //   font-size: 0.9rem;
+      // }
 
       &-svg {
         display: none;

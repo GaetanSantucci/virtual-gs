@@ -1,5 +1,5 @@
 'use client';
-import { LayoutMobile, ServiceDot, ServiceHexagone, ServiceLayout, ServiceTitle } from '../SvgComponent/serviceSvg';
+import { Layout, LayoutMobile, ServiceDot, ServiceHexagone, ServiceLayout, ServiceTitle } from '../SvgComponent/serviceSvg';
 import './service.scss';
 import Image from 'next/image';
 
@@ -26,6 +26,7 @@ export const ServicePage = () => {
       </div>
       <div className="service-container-main">
         <LayoutMobile />
+        {/* <Layout /> */}
         <ServiceLayout />
       </div>
       <div className="service-container-main-picture">
