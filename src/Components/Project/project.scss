@@ -58,8 +58,8 @@
       &-card {
         position: relative;
         overflow: hidden;
-        width: 330px;
-        height: 210px;
+        width: 320px;
+        height: 200px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -128,6 +128,7 @@
   opacity: 0;
   & h2,
   p {
+    font-size: 1rem;
     color: var(--primary-fluo-color);
   }
   & p {

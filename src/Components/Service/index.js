@@ -10,14 +10,6 @@ import { isMobile } from 'react-device-detect';
 
 export const ServicePage = () => {
 
-  // const [isMobileDevice, setIsMobileDevice] = useState(false);
-
-  // useEffect(() => {
-  //   if(isMobile) {
-  //     setIsMobileDevice(true)
-  //   }
-  // }, [])
-
   return (
     <section className="service-container">
       <ServiceHexagone />

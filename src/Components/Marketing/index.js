@@ -27,7 +27,8 @@ export const MarketingPage = () => {
               <div className='marketing-container-main-benefit-card-content-icon'><IconPerformance /></div>
               <div className='marketing-container-main-benefit-card-content-figure'>83%</div>
               <p>Des consommateurs pensent qu&apos;une expèrience fluide est importante pour leur décision d&apos;achat</p>
-              <p>Ma connaissance des clients me permet de comprendre leurs attentes, je développe des sites en prenant un maximum d&apos;éléments. </p>
+              <p>Ma connaissance des clients me permet de comprendre leurs attentes, je développe des sites en prenant un maximum d&apos;
+                éléments. </p>
               <p>Un site fluide et performant permet de fidéliser sa clientèle et d&apos;augmenter son chiffre d&apos;affaires.</p>
             </div>
           </div>

@@ -3,6 +3,7 @@
 .marketing-container {
   @include mixins.section();
   position: relative;
+  display: flex !important;
   &-background {
     position: absolute;
     right: 0;
