@@ -78,6 +78,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    margin-left: 25px;
 
     &-catchphrase {
       & p {
@@ -216,6 +217,39 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .homepage-container {
+    &-header {
+      margin-top: 0;
+      &-logo-svg {
+        & svg {
+          width: 25%;
+        }
+      }
+
+      &-logo-name {
+        margin-top: 1rem;
+        width: 280px;
+      }
+    }
+
+    &-visual {
+      flex-direction: column;
+
+      &-title {
+        margin-bottom: 2rem;
+        & h1 {
+          color: var(--primary-dark-color);
+        }
+      }
+    }
+  }
+
+  .background-shadow {
+    bottom: 35%;
+  }
+}
+
 @media (max-width: 640px) {
   .container {
     width: 100%;
@@ -254,10 +288,6 @@
         }
       }
 
-      // & p {
-      //   font-size: 0.9rem;
-      // }
-
       &-svg {
         display: none;
       }
@@ -292,5 +322,6 @@
 
   .background-shadow {
     top: 0;
+    bottom: 30%;
   }
 }

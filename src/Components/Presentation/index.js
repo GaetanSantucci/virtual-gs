@@ -3,7 +3,7 @@ import './presentation.scss';
 
 export const PresentationPage = () => {
   return (
-    <section className='presentation-container'>
+    <section className='presentation-container' >
       <div className='presentation-container-main'>
         <div className='presentation-container-main-presentation'>
           <h2 className='presentation-container-main-presentation-title'>Stratégie</h2>
@@ -43,9 +43,8 @@ export const PresentationPage = () => {
           </div>
         </div>
       </div>
-      <div className='presentation-container-background'>
-      </div>
-      <div className='presentation-container-background-dot'>
+      <div className='presentation-container-dot'>
+        <Dot />
         <Dot />
       </div>
     </section >

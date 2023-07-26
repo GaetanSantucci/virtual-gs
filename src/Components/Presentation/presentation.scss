@@ -3,51 +3,35 @@
 .presentation-container {
   position: relative;
   @include mixins.section();
-  &-background {
-    width: 100%;
-    height: 70vh;
-    position: absolute;
-    background-color: var(--primary-fluo-color);
-    opacity: 0.9;
-    // right: 0;
-    // left: 0;
-    z-index: -2;
-    // & svg {
-    //   height: 100%;
-    //   & rect {
-    //     fill: var(--primary-fluo-color);
-    //     opacity: 0.8;
-    //   }
-    //   & path {
-    //     &:nth-child(2) {
-    //       fill: var(--primary-light-color);
-    //       fill-opacity: 0.2;
-    //     }
-    //     &:nth-child(3) {
-    //       fill: var(--primary-dark-color);
-    //       fill-opacity: 0.6;
-    //     }
-    //   }
-    // }
+  background-color: var(--primary-fluo-color);
 
-    &-dot {
+  &-dot {
+    width: 100%;
+    position: relative;
+    & svg {
       width: 150px;
       position: absolute;
-      z-index: -1;
-      bottom: 70px;
-      left: 20%;
+      bottom: 0;
       height: auto;
       & circle {
-        fill: var(--primary-grey-color);
+        fill: #1d6d52;
         fill-opacity: 0.6;
+      }
+      &:nth-child(1) {
+        left: 100px;
+      }
+      &:nth-child(2) {
+        left: 267px;
       }
     }
   }
 
   &-main {
     width: 90%;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
+    margin: 5rem 0;
 
     &-presentation {
       width: 25%;
@@ -212,7 +196,9 @@
 
 @media (max-width: 1024px) {
   .presentation-container {
+    padding: 0 0;
     &-main {
+      margin: 0 0;
       background-color: var(--primary-fluo-color);
       flex-direction: column;
       align-items: center;
@@ -223,7 +209,7 @@
         align-items: center;
         // margin-bottom: 2rem;
 
-        & h3 {
+        &-subtitle {
           margin-top: 0;
         }
         & p {
@@ -265,15 +251,15 @@
 
       &-presentation {
         width: 90%;
-        margin-top: 2rem;
+        margin-top: 3rem;
         padding-top: 0;
 
         &-title {
           font-size: 2rem;
-          color: var(--primary-fluo-color);
+          color: var(--primary-light-color);
         }
         &-subtitle {
-          margin-top: 0;
+          margin-top: 1rem;
           font-size: 1.4rem;
         }
 
@@ -288,30 +274,11 @@
         flex-direction: column;
         align-items: center;
         background-color: #49b792b0;
-        margin: 3rem 0;
+        margin: 0;
 
         &-card {
           width: 80%;
           margin: 1rem;
-
-          // &-content {
-          //   // height: auto;
-          //   padding-bottom: 2rem;
-          // }
-
-          // &-title {
-          //   color: var(--primary-light-color);
-          // }
-
-          // & h3 {
-          //   color: var(--primary-light-color);
-          // }
-
-          // &:hover {
-          //   & h3 {
-          //     transition: all 400ms;
-          //   }
-          // }
         }
       }
     }

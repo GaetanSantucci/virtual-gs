@@ -1,7 +1,5 @@
 import './project.scss';
 
-import { BackgroundProject } from '../SvgComponent';
-
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -23,15 +21,6 @@ export const ProjectPage = () => {
             </article>
             <Image src='/images/wakeup.webp' alt='wakeup' width={1000} height={600} />
           </Link>
-          <Link href='https://rpdata.fr' className='project-container-main-content-card'>
-            <article className='project-container-main-content-card-presentation'>
-              <h3 className='project-container-main-content-card-presentation-title'>RP DATA</h3>
-              <span className='project-container-main-content-card-presentation-separate'></span>
-              <p>Site d&apos;analyse data client</p>
-              <p>Accompagnement, formation</p>
-            </article>
-            <Image src='/images/rpdata.webp' alt='rp data' width={1000} height={600} />
-          </Link>
           <Link href='https://e-co-roads.netlify.app/' className='project-container-main-content-card'>
             <article className='project-container-main-content-card-presentation'>
               <h3 className='project-container-main-content-card-presentation-title'>ECO-ROADS</h3>
@@ -41,23 +30,38 @@ export const ProjectPage = () => {
             </article>
             <Image src='/images/ecoroads.webp' alt='ecoroads' width={1000} height={600} />
           </Link>
+          <Link href='https://gaetansantucci.com' className='project-container-main-content-card'>
+            <article className='project-container-main-content-card-presentation'>
+              <h3 className='project-container-main-content-card-presentation-title'>PORTFOLIO</h3>
+              <span className='project-container-main-content-card-presentation-separate'></span>
+              <p>Portfolio thème sombre</p>
+            </article>
+            <Image src='/images/gaetansantucci.webp' alt='gaetan santucci portfolio' width={1000} height={600} />
+          </Link>
+          <Link href='https://rpdata.fr' className='project-container-main-content-card'>
+            <article className='project-container-main-content-card-presentation'>
+              <h3 className='project-container-main-content-card-presentation-title'>RP DATA</h3>
+              <span className='project-container-main-content-card-presentation-separate'></span>
+              <p>Site d&apos;analyse data client</p>
+              <p>Accompagnement, formation</p>
+            </article>
+            <Image src='/images/rpdata.webp' alt='rp data' width={1000} height={600} />
+          </Link>
+
           <a href='#contact' className='project-container-main-content-card'>
             <article className='project-container-main-content-card-presentation'>
-              <h3 className='project-container-main-content-card-presentation-title'>Nouveau projet</h3>
+              <h3 className='project-container-main-content-card-presentation-title'>VOTRE PROJET</h3>
               <span className='project-container-main-content-card-presentation-separate'></span>
+              <p>Et si c&apos;était votre site ici ?</p>
+              <p>Contactez moi afin que nous puissions discuter de votre projet en cliquant <span>ici</span></p>
+            </article>
+            <div className='project-message'>
               <p>VIRTUAL GS</p>
               <p>X</p>
               <p>?</p>
-            </article>
-            <div className='project-message'>
-              <h2>Et si c&apos;était votre site ici ?</h2>
-              <p>Contactez moi afin que nous puissions discuter de votre projet en cliquant <span>ici</span></p>
             </div>
           </a>
         </div>
-      </div>
-      <div className='project-container-background'>
-        <BackgroundProject />
       </div>
     </section>
   )

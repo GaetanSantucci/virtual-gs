@@ -71,10 +71,10 @@ export const ContactPage = () => {
 
   return (
     <section className="contact-container">
-      <div className='contact-background-shadow'>
+      {/* <div className='contact-background-shadow'>
         <ContactBackgroundSVG />
-      </div>
-      <h3 className='title'>Contact</h3>
+      </div> */}
+      <h3 className='title'>Contactez moi</h3>
       <form className="contact-form">
         <div className='contact-form-name'>
           <input type="text" placeholder='Nom' className='input-text' value={lastname} onChange={(e) => setLastname(e.target.value)} required />

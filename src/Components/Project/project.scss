@@ -5,6 +5,7 @@
   @include mixins.section();
   position: relative;
   overflow: hidden;
+  margin-top: 5rem;
 
   &-background {
     position: absolute;
@@ -30,46 +31,49 @@
   }
 
   &-main {
-    width: 90%;
-    height: 70%;
+    // width: 60%;
+    // height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     row-gap: 20px;
-
+    padding: 3rem 0;
     &-presentation {
       & h2 {
         font-size: 2.4rem;
-        color: var(--font-light-color);
+        color: var(--primary-dark-color);
         font-family: var(--font-title);
       }
     }
 
     &-content {
-      width: 100%;
+      width: 80%;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 5px;
+      margin-top: 2rem;
 
       &-card {
         position: relative;
         overflow: hidden;
-        width: 320px;
-        height: 200px;
+        width: 385px;
+        height: 235px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-radius: 5px;
         justify-content: center;
         background-color: #f2f2f2;
         cursor: pointer;
 
         &-presentation {
+          width: 100%;
+          height: 100%;
+          background-color: var(--primary-fluo-color);
           position: absolute;
+          top: 100%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -77,17 +81,19 @@
           transition: all 1000ms;
           color: #555555;
           text-align: center;
+          opacity: 0.9;
 
           &-title {
-            color: var(--primary-dark-color);
+            color: var(--primary-light-color);
             font-family: 'Poppins regular';
           }
           & p {
             font-family: var(--font-paragraph);
+            color: var(--primary-light-color);
           }
 
           &-separate {
-            border-top: 1px solid var(--primary-fluo-color);
+            border-top: 1px solid var(--primary-dark-color);
             width: 150px;
             height: 1px;
             display: block;
@@ -98,23 +104,22 @@
           height: 100%;
           object-fit: center;
           transition: all 1000ms;
-          opacity: 0;
+          // opacity: 0;
         }
 
         &:hover {
           .project-container-main-content-card-presentation {
             transition: all 800ms;
-            opacity: 0.2;
-            transform: scale(0);
+            top: 0;
+            // opacity: 0.2;
+            // transform: scale(0);
           }
           .project-container-main-content-card-presentation-separate {
             animation: line 600ms linear forwards;
           }
-          img,
           .project-message {
-            transition: all 800ms;
-            opacity: 1;
-            transform: scale(1);
+            transition: all 400ms;
+            opacity: 0;
           }
         }
       }
@@ -125,31 +130,33 @@
 .project-message {
   transition: all 1000ms;
   padding: 1rem;
-  opacity: 0;
-  & h2,
-  p {
-    font-size: 1rem;
-    color: var(--primary-fluo-color);
-  }
+  text-align: center;
   & p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--paragraph-color);
     font-family: var(--font-paragraph);
   }
-
-  & span {
-    cursor: pointer;
-    text-decoration: underline;
-  }
+  // & span {
+  //   cursor: pointer;
+  //   text-decoration: underline;
+  // }
 }
 
 @keyframes line {
   0% {
-    width: 150px;
-  }
-  20% {
-    width: 15px;
+    width: 0;
   }
   100% {
-    width: 0;
+    width: 150px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .project-container {
+    &-main {
+      width: 80%;
+    }
   }
 }
 
@@ -167,18 +174,11 @@
         width: 90%;
         display: flex;
         justify-content: flex-start;
-        margin: 1rem 0;
       }
 
       & h2 {
         color: var(--primary-fluo-color);
         font-size: 2rem;
-      }
-
-      &-content {
-        padding: 2rem 0;
-        width: 100%;
-        background-color: rgba(73, 183, 146, 0.6901960784);
       }
     }
   }

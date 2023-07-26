@@ -3,9 +3,21 @@
 .service-container {
   @include mixins.section($justify: center);
   position: relative;
+  margin: 5rem 0 2rem 0;
   &-title {
+    position: relative;
     & svg {
-      width: 150%;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    & h2 {
+      font-size: 2.4rem;
+      color: var(--paragraph-color);
+      font-family: var(--font-title);
     }
   }
 
@@ -14,29 +26,24 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-
+    margin-top: 3rem;
     & svg {
       width: 100%;
     }
+  }
+  & img {
+    width: 25%;
+    height: auto;
+    position: absolute;
+    bottom: -130px;
+    right: 50px;
+    z-index: 1;
+    filter: drop-shadow(0 12px 6px var(--primary-grey-color));
+    transition: all 400ms;
 
-    &-picture {
-      width: 90%;
-      display: flex;
-      justify-content: flex-end;
-      & img {
-        width: 20%;
-        height: auto;
-        position: absolute;
-        bottom: 20px;
-        right: 8%;
-        filter: drop-shadow(0 12px 6px var(--primary-grey-color));
-        transition: all 400ms;
-
-        &:hover {
-          transform: translateY(-10px) scale(1.2);
-          transition: all 400ms;
-        }
-      }
+    &:hover {
+      transform: translateY(-10px) scale(1.2);
+      transition: all 400ms;
     }
   }
 
@@ -100,8 +107,8 @@
     &-dot {
       width: 13%;
       position: absolute;
-      bottom: 0;
-      left: 200px;
+      bottom: -100px;
+      right: 00px;
       &-circle {
         fill-opacity: 0.2;
         fill: var(--primary-dark-color);
@@ -111,7 +118,7 @@
 }
 
 .service-hexagone-title {
-  fill: var(--primary-fluo-color);
+  fill: var(--primary-dark-color);
 }
 
 .layout-mobile {

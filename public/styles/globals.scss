@@ -10,12 +10,12 @@
 
   --primary-grey-color: #b4b4b4;
   --primary-light-color: #f2f2f2;
-  --primary-dark-color: #2a2a2a;
+  --primary-dark-color: #353535;
   --primary-fluo-color: #49b792;
   --primary-purple-color: #6551ff;
 
   --font-light-color: #f2f2f2;
-  --paragraph-color: #292929;
+  --paragraph-color: #353535;
   --foreground-rgb: #ffffff;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -33,12 +33,8 @@
 }
 
 body {
-  // height: 100%;
-  // overflow-y: visible;
   position: relative;
-  height: unset;
-  // overflow: hidden;
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--paragraph-color));
   background: linear-gradient(
       to bottom,
       transparent,
@@ -75,8 +71,20 @@ textarea {
   resize: none;
 }
 
+#accueil {
+  height: 100vh;
+}
+
+#marketing {
+  position: relative;
+  margin-top: 5rem;
+}
+
 .panel {
-  height: 90vh;
+  // height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   // min-height: 1024px;
 }
 
@@ -98,6 +106,6 @@ textarea {
   }
 
   .container {
-    margin-top: 8vh;
+    margin-top: 6vh;
   }
 }
