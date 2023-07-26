@@ -234,6 +234,10 @@
       display: flex;
       width: 90%;
       justify-content: center;
+      flex-direction: column;
+      & h2 {
+        font-size: 2rem;
+      }
     }
 
     .service {
