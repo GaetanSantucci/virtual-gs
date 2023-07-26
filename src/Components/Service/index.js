@@ -7,11 +7,9 @@ export const ServicePage = () => {
 
   return (
     <section className="service-container">
-      <ServiceHexagone />
       <div className='service-container-title'>
-        <ServiceTitle />
-        <h2>Construisons votre projet</h2>
-        <h2>autour de mes forces</h2>
+        <h2>Construisons votre projet autour de mes connaissances</h2>
+        <h2></h2>
       </div>
       <div className="service-container-main">
         <LayoutMobile />

@@ -9,7 +9,7 @@ export const ProjectPage = () => {
     <section className="project-container">
       <div className="project-container-main">
         <div className='project-container-main-presentation'>
-          <h2 >Projets</h2>
+          <h2 >Mes réalisations</h2>
         </div>
         <div className='project-container-main-content'>
           <Link href='https://wakeupclf.fr' className='project-container-main-content-card'>
@@ -19,7 +19,7 @@ export const ProjectPage = () => {
               <p>Livraison de plateaux brunch</p>
               <p>Sur Clermont-Ferrand et ses alentours</p>
             </article>
-            <Image src='/images/wakeup.webp' alt='wakeup' width={1000} height={600} />
+            <Image src='/images/wakeup1.webp' alt='wake up clermont-ferrand' width={1000} height={600} />
           </Link>
           <Link href='https://e-co-roads.netlify.app/' className='project-container-main-content-card'>
             <article className='project-container-main-content-card-presentation'>

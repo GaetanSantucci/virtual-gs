@@ -22,8 +22,7 @@ export const Homepage = () => {
       </div>
       <div className='homepage-container-visual'>
         <div className='homepage-container-visual-title'>
-          <h1>Créateur de site</h1>
-          <h1>internet moderne et engagé</h1>
+          <h1>Votre destination pour un site unique</h1>
         </div>
         <div className='homepage-container-visual-image'>
           <Image src='/images/mockup_homepage.png' alt='logo' width={800} height={600} priority />
@@ -31,8 +30,8 @@ export const Homepage = () => {
       </div>
       <div className='homepage-container-presentation'>
         <div className='homepage-container-presentation-catchphrase'>
-          <p>Renforcez votre présence numérique</p>
-          <p>avec mes solutions de développement web personnalisées</p>
+          <p>Renforcez votre présence numérique avec mes solutions de développement web personnalisées.</p>
+          <p>Du design responsive à une stratégie de référencement.</p>
         </div>
         <div className='homepage-container-presentation-svg'>
           <Hexagone />
