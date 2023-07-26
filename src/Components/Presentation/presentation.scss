@@ -1,37 +1,40 @@
 @use '/public/styles/mixins';
 
-.marketing-container {
-  @include mixins.section();
+.presentation-container {
   position: relative;
-  display: flex !important;
+  @include mixins.section();
   &-background {
+    width: 100%;
+    height: 70vh;
     position: absolute;
-    right: 0;
-    left: 0;
-    z-index: -1;
-    & svg {
-      height: 100%;
-      & rect {
-        fill: var(--primary-fluo-color);
-        opacity: 0.8;
-      }
-      & path {
-        &:nth-child(2) {
-          fill: var(--primary-light-color);
-          fill-opacity: 0.2;
-        }
-        &:nth-child(3) {
-          fill: var(--primary-dark-color);
-          fill-opacity: 0.6;
-        }
-      }
-    }
+    background-color: var(--primary-fluo-color);
+    opacity: 0.9;
+    // right: 0;
+    // left: 0;
+    z-index: -2;
+    // & svg {
+    //   height: 100%;
+    //   & rect {
+    //     fill: var(--primary-fluo-color);
+    //     opacity: 0.8;
+    //   }
+    //   & path {
+    //     &:nth-child(2) {
+    //       fill: var(--primary-light-color);
+    //       fill-opacity: 0.2;
+    //     }
+    //     &:nth-child(3) {
+    //       fill: var(--primary-dark-color);
+    //       fill-opacity: 0.6;
+    //     }
+    //   }
+    // }
 
     &-dot {
       width: 150px;
       position: absolute;
-      z-index: -2;
-      bottom: 0;
+      z-index: -1;
+      bottom: 70px;
       left: 20%;
       height: auto;
       & circle {
@@ -47,7 +50,7 @@
     justify-content: space-between;
 
     &-presentation {
-      width: 30%;
+      width: 25%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -61,9 +64,9 @@
         font-family: var(--font-title);
       }
       &-subtitle {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin-top: 2rem;
-        color: #348369;
+        color: #1d6d52;
       }
       & p {
         font-family: var(--font-paragraph);
@@ -74,7 +77,7 @@
     }
 
     &-benefit {
-      width: 70%;
+      width: 75%;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
@@ -86,11 +89,12 @@
         align-items: center;
 
         &-title {
+          text-align: center;
+          width: 95%;
           margin-bottom: 1rem;
-          letter-spacing: 1.4px;
+          letter-spacing: 1.2px;
           font-family: var(--font-paragraph);
-          color: var(--primary-grey-color);
-          filter: drop-shadow(2px 2px 4px var(--primary-dark-color));
+          color: var(--primary-dark-color);
           transition: all 400ms;
         }
 
@@ -98,25 +102,14 @@
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          height: 430px;
+          height: 480px;
           background-color: #ffffff;
           padding: 0 1rem 1rem 1rem;
           border-radius: 1rem;
           transition: all 400ms;
-          &:hover {
-            transition: all 400ms;
-            background-color: var(--primary-fluo-color);
-            animation: move 4s linear infinite alternate;
-            filter: drop-shadow(0 2px 6px var(--primary-dark-color));
-            & svg {
-              filter: drop-shadow(0 2px 2px var(--primary-grey-color));
-              transition: all 400ms;
-            }
-            .icon-card {
-              fill: var(--primary-light-color);
-              transition: all 200ms;
-            }
-          }
+          overflow: hidden;
+          overflow-y: auto;
+          text-overflow: ellipsis;
 
           &-icon {
             width: 120px;
@@ -125,7 +118,7 @@
               transition: all 400ms;
               .icon-card {
                 transition: all 400ms;
-                fill: var(--primary-fluo-color);
+                fill: var(--primary-light-color);
 
                 &-stroke {
                   fill: var(--primary-dark-color);
@@ -137,6 +130,8 @@
           &-figure {
             font-family: var(--font-paragraph);
             font-size: 2.4rem;
+            font-weight: 600;
+            color: var((--primary-purple-color));
             text-align: center;
           }
 
@@ -150,7 +145,8 @@
 
         &:hover {
           & h3 {
-            color: var(--primary-light-color);
+            color: var(--primary-purple-color);
+            // opacity: 0.8;
             transition: all 400ms;
           }
         }
@@ -159,7 +155,7 @@
   }
 }
 
-.marketing-container-main-benefit-card:hover {
+.presentation-container-main-benefit-card:hover {
   &-title {
     color: #ffffff;
   }
@@ -214,8 +210,52 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .presentation-container {
+    &-main {
+      background-color: var(--primary-fluo-color);
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      &-presentation {
+        width: 50%;
+        align-items: center;
+        // margin-bottom: 2rem;
+
+        & h3 {
+          margin-top: 0;
+        }
+        & p {
+          text-align: center;
+        }
+      }
+
+      &-benefit {
+        width: 100%;
+        padding: 3rem 1rem;
+
+        &-card {
+          width: 32%;
+          z-index: 2;
+        }
+      }
+    }
+
+    &-background {
+      display: none;
+      &-dot {
+        width: 120px;
+        z-index: 0;
+        bottom: -35px;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
 @media (max-width: 640px) {
-  .marketing-container {
+  .presentation-container {
     height: 100%;
     margin-top: 2rem;
     &-main {
@@ -254,25 +294,24 @@
           width: 80%;
           margin: 1rem;
 
-          &-content {
-            height: auto;
-            padding-bottom: 2rem;
-            filter: drop-shadow(0px 2px 2px var(--primary-dark-color));
-          }
+          // &-content {
+          //   // height: auto;
+          //   padding-bottom: 2rem;
+          // }
 
-          &-title {
-            color: var(--primary-light-color);
-          }
+          // &-title {
+          //   color: var(--primary-light-color);
+          // }
 
-          & h3 {
-            color: var(--primary-light-color);
-          }
+          // & h3 {
+          //   color: var(--primary-light-color);
+          // }
 
-          &:hover {
-            & h3 {
-              transition: all 400ms;
-            }
-          }
+          // &:hover {
+          //   & h3 {
+          //     transition: all 400ms;
+          //   }
+          // }
         }
       }
     }

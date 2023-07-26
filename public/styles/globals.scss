@@ -33,11 +33,11 @@
 }
 
 body {
-  height: 100%;
-  overflow-y: visible;
+  // height: 100%;
+  // overflow-y: visible;
   position: relative;
   height: unset;
-  overflow: hidden;
+  // overflow: hidden;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -50,6 +50,10 @@ body {
 html,
 body {
   -webkit-overflow-scrolling: touch;
+}
+
+#panels {
+  margin-right: 50px;
 }
 
 a {
@@ -72,8 +76,8 @@ textarea {
 }
 
 .panel {
-  height: 100vh;
-  top: 0;
+  height: 90vh;
+  // min-height: 1024px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -95,9 +99,5 @@ textarea {
 
   .container {
     margin-top: 8vh;
-  }
-
-  .panel {
-    height: auto;
   }
 }
